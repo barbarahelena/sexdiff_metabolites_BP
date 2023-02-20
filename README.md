@@ -14,7 +14,26 @@ Secondary aim: to investigate the associations between gut microbiota compositio
 Most of the analyses were performed in RStudio (v) using R (v). We used renv and uploaded a snapshot in this repository.
 
 ## Machine learning design
-We used a machine learning algorithm to assess which plasma metabolites were most predictive for BP, HRV and BRS in men and women. All machine learning models used the XGBoost algorithm in a nested cross-validation design. In each iteration, the dataset was randomly split into a test set containing 20% of the subjects and a training set with the remaining 80%. Within the train set, 5-fold cross-validation was performed in order to optimize the model hyperparameters. Two random variables were added to the determinants in each iteration to serve as a benchmark. The resulting model was evaluated on the test set which yielded an area under the receiver-operator curve (AUC) for classification models, and explained variance (%) for continuous outcomes as main model quality metrics. In addition, each iteration resulted in a ranked list of metabolites with their relative importance to the prediction, with the first ranked metabolite set at 100% and the other metabolites’ importance calculated relative to the first. These were recorded for each iteration and were averaged across 200 iterations. Because of the definition of the explained variance score formula,33 the explained variance score could also be a negative value, meaning that the prediction is worse than an intercept. To ensure that these models were not overfitted, we ran identical models in which the data was permuted before every iteration.
+### Introduction
+We used a machine learning algorithm to assess which plasma metabolites were most predictive for BP, HRV and BRS in men and women. All machine learning models used the XGBoost algorithm in a nested cross-validation design. In each iteration, the dataset was randomly split into a test set containing 20% of the subjects and a training set with the remaining 80%. Within the train set, 5-fold cross-validation was performed in order to optimize the model hyperparameters. Two random variables were added to the determinants in each iteration to serve as a benchmark. The resulting model was evaluated on the test set which yielded an area under the receiver-operator curve (AUC) for classification models, and explained variance (%) for continuous outcomes as main model quality metrics. In addition, each iteration resulted in a ranked list of metabolites with their relative importance to the prediction, with the first ranked metabolite set at 100% and the other metabolites’ importance calculated relative to the first. These were recorded for each iteration and were averaged across 200 iterations. Because of the definition of the explained variance score formula, the explained variance score could also be a negative value, meaning that the prediction is worse than an intercept. To ensure that these models were not overfitted, we ran identical models in which the data was permuted before every iteration.
+
+machine-learning-design-2.png![afbeelding](https://user-images.githubusercontent.com/34349946/220132667-66f5c8ca-cd09-4328-a7f5-4b85e8ce94f1.png)
+
+### Installing conda env
+For installation of the conda environment, you will need the yaml file in this folder (xgb_mac_env.yaml). First change the name / path of the environment from the yaml file, if needed. You can install the conda environment using:
+`conda env create --file xgb_mac_env.yaml`
+
+Then activate the environment before running a model with:
+`conda activate xgb`
+
+### Running the models
+As soon as the conda environment is activate, you'll need the the following items for running the model:
+- Input data (x and y) in the right formats as created by the create_input_data scripts (see below ToC: scripts)
+- XGBoost model python script (XGBoost.py)
+- Parameter grid (metabolite_grid.json or microbiota_grid.json for this project)
+- Bash script with the commands to run the model
+
+The XGBoost.py has a --help section with the possible arguments for the function.
 
 ## ToC: scripts
 The scripts shared in this repository are numbered, and are discussed below in the same order:
