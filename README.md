@@ -98,10 +98,10 @@ Tables and figures resulting from these scripts that can be found in the results
 - Tables: table 1 (study population), table 2 (subgroup with Nexfin data), table 3 (subgroup without diabetes)
 - Figure 1: descriptive characteristics
 - Explained variance: 
- > tables with explained variance of all models; 
- > tables with explained variance of permuted models; 
- > plots with explained variances of different models.
+  - tables with explained variance of all models; 
+  - tables with explained variance of permuted models; 
+  - plots with explained variances of different models.
 - Linear regressions models:
- > tables with linear regression results
- > forest plots with estimates of linear regressions
+  - tables with linear regression results
+  - forest plots with estimates of linear regressions
 In addition, in each folder with the output of the XGBoost models, the results from the "process_output" scripts can be found. These include the feature importance plots and the scatter plots (regression) / violin plots (classification) for the highest ranked predictors resulting from the machine learning models. 
