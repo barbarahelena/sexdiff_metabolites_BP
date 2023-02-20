@@ -45,13 +45,7 @@ prepare <- function(bestpred, metabolites, helius){
         select(Metabolite=FeatName, RelFeatImp) %>% 
         arrange(-RelFeatImp) %>% 
         slice(1:10)
-    best_met <- metabolites %>% 
-        inner_join(., best, by='Metabolite') %>% 
-        arrange(-RelFeatImp)
-    rownames(best_met) <- best_met$Metabolite
-    best_met$Metabolite <- NULL
-    best_met$RelFeatImp <- NULL
-    best_met <- as.data.frame(t(as.matrix(best_met)))
+    best_met <- metabolites[,best$Metabolite]
     best_met$ID <- as.integer(rownames(best_met))
     helius_best <- left_join(helius, best_met, by='ID')
     return(helius_best)
@@ -62,19 +56,10 @@ metab_func <- function(bestpred, metabolites){
         select(Metabolite=FeatName, RelFeatImp) %>% 
         arrange(-RelFeatImp) %>% 
         slice(1:10)
-    best_met <- metabolites %>% 
-        inner_join(., best, by='Metabolite') %>% 
-        arrange(-RelFeatImp)
-    rownames(best_met) <- best_met$Metabolite
-    best_met$Metabolite <- NULL
-    best_met$RelFeatImp <- NULL
-    best_met <- as.data.frame(t(as.matrix(best_met)))
-    best_met$ID <- as.integer(rownames(best_met))
     return(best)
 }
 
 lin_strata <- function(df, dfname, outcome, metab, writetable = FALSE, figure = TRUE){
-    #df = helius_fem_sbp
     theme_Publication <- function(base_size=12, base_family="sans") {
         library(grid)
         library(ggthemes)
@@ -120,11 +105,11 @@ lin_strata <- function(df, dfname, outcome, metab, writetable = FALSE, figure = 
         ## Models
         res_lin <- c()
         for (a in levels(dfsub$Sex)){
-            dftemp <- dfsub %>% filter(Sex==a)
+            dftemp <- dfsub %>% filter(Sex == a)
             for (i in c(10:19)){
                 dftemp$met <- NULL 
-                dftemp$met <- dftemp[,i]
-                dfsub$met <- dfsub[,i]
+                dftemp$met <- dftemp[,i][[1]]
+                dfsub$met <- dfsub[,i][[1]]
                 m1 <- lm(outcome ~ scale(met) + Age + CKDEPI + BMI + DM + 
                              Microalb + CurrSmoking + AntiHT, data=dftemp)
                 m2 <- lm(outcome ~ scale(met) + scale(met)*Sex + Age + CKDEPI + 
@@ -182,14 +167,11 @@ lin_strata <- function(df, dfname, outcome, metab, writetable = FALSE, figure = 
 
 ## Opening HELIUS file, metabolite data and best predictor files
 heliusData <- readRDS('../data/helius_malefemale.RDS')
-sampleList <- rio::import('../data/EDTA_samples.xlsx')[[3]]
-summary_metabolites <- rio::import('../data/Info_plasma_metabolites.xlsx')
-metabolites <- rio::import('../data/HELIUS_EDTA_plasma_metabolites.xlsx')
-
-best_fem_sbp <- rio::import('Fem/SBP/output_XGB_reg_Fem_SBP_2020_11_11__21-19-13/feature_importance.txt')
-best_male_sbp <- rio::import('Male/SBP/output_XGB_reg_Male_SBP_2020_11_11__22-19-04/feature_importance.txt')
-best_fem_dbp <- rio::import('Fem/DBP/output_XGB_reg_Fem_DBP_2020_11_12__06-04-17/feature_importance.txt')
-best_male_dbp <- rio::import('Male/DBP/output_XGB_reg_Male_DBP_2020_11_12__07-03-15/feature_importance.txt')
+metabolites <- readRDS('../data/HELIUS_plasma_metabolites.RDS')
+best_fem_sbp <- rio::import('SBP/Female/output_XGB_reg_Fem_SBP_2020_11_11__21-19-13/feature_importance.txt')
+best_male_sbp <- rio::import('SBP/Male/output_XGB_reg_Male_SBP_2020_11_11__22-19-04/feature_importance.txt')
+best_fem_dbp <- rio::import('DBP/Female/output_XGB_reg_Fem_DBP_2020_11_12__06-04-17/feature_importance.txt')
+best_male_dbp <- rio::import('DBP/Male/output_XGB_reg_Male_DBP_2020_11_12__07-03-15/feature_importance.txt')
 
 ## Prepare metabolite files
 helius_fem_sbp <- prepare(best_fem_sbp, metabolites, heliusData)
