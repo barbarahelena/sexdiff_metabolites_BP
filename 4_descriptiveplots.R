@@ -6,6 +6,7 @@ pacman::p_load(rio, haven, Hmisc, tidyverse, tidyselect, tableone, ggsci, ggpubr
                kableExtra, knitr, naniar, rms, clipr)
 
 ##### Functions ####
+source('functions_class.R')
 theme_Publication <- function(base_size=12, base_family="sans") {
     library(grid)
     library(ggthemes)
@@ -41,7 +42,8 @@ theme_Publication <- function(base_size=12, base_family="sans") {
 } 
 
 #### Opening data files ####
-helius <- readRDS(helius, "../data/helius_malefemale.RDS")
+helius <- readRDS("../data/helius_malefemale.RDS")
+metabolites <- readRDS("../data/HELIUS_plasma_metabolites.RDS")
 
 #### Plots SBP - DBP - HRV (SDNN) - BRS ####
 col <- pal_lancet()(2)[c(2,1)]
@@ -90,13 +92,10 @@ pl_brs <- ggplot(helius) +
     scale_fill_manual(values = col, guide = "none"))
 
 #### PCA plot metabolites ####
-dim(metabolites)
-metabolites[1:10, 1]
-mat <- metabolites[,-1]
-rownames(mat) <- metabolites[,1]
-mat <- t(mat)
-
-pca <- prcomp(mat, center = T, scale. = T)
+set.seed(1234)
+head(metabolites)
+mat <- as.matrix(metabolites)
+pca <- prcomp(mat, center = TRUE, scale = TRUE)
 df <- as.data.frame(pca$x[, 1:5])
 summary(pca)
 pc1_ev <- round(summary(pca)$importance[2,1] * 100, 2)
@@ -118,63 +117,13 @@ col <- pal_lancet()(2)[c(2,1)]
 
 #### Differences in metabolite levels ####
 
-# first feature imp plot classification model
+# first feature imp plot classification model (see script 3c)
+path_true <- 'MaleFemale/output_XGB_class_MaleFemale_2020_11_18__14-57-28'
+data_path <- 'MaleFemale/input_data'
+(pl_featimp <- plot_feature_importance_colors(path_true, top_n = 15, savegg = FALSE))
 
-
-# differences in three top predictors
-met <- metabolites$Metabolite
-metabolites$Metabolite <- NULL # remove column with names
-
-met2 <- as.data.frame(t(as.matrix(metabolites))) # rows become columns
-colnames(met2) <- met # metabolite names colnames
-met2$ID <- as.integer(rownames(met2)) # IDs as rownames
-
-tot <- left_join(met2, helius, by = "ID")
-
-(plmet1 <- ggplot(tot %>% filter(`dihomo-linolenoylcarnitine (C20:3n3 or 6)*` < 100), 
-       aes(x = Sex, y = `dihomo-linolenoylcarnitine (C20:3n3 or 6)*`)) +
-    geom_violin(aes(fill = interaction(Sex, Age_cat)), position = position_dodge(1.0)) +
-    geom_boxplot(aes(group = interaction(Sex, Age_cat)), 
-                 fill = "white", width = 0.2, outlier.shape = NA,
-                 position = position_dodge(1.0)) +
-    scale_fill_manual(values = pal_jco()(4)[c(1,4)]) +
-    stat_compare_means(aes(label = paste0("p = ", ..p.format..),group = interaction(Sex, Age_cat))) +
-    labs(x = "Sex", y = "dihomo-linolenoylcarnitine levels",
-         title = "dihomo-linolenoylcarnitine") +
-    theme_Publication() +
-    theme(legend.title = element_blank()))
-
-(plmet2 <- ggplot(tot %>% filter(`dihomo-linolenoylcarnitine (C20:3n3 or 6)*` < 100), 
-               aes(x = Sex, y = `dihomo-linolenoylcarnitine (C20:3n3 or 6)*`)) +
-        geom_violin(aes(fill = interaction(Sex, Age_cat)), position = position_dodge(1.0)) +
-        geom_boxplot(aes(group = interaction(Sex, Age_cat)), 
-                     fill = "white", width = 0.2, outlier.shape = NA,
-                     position = position_dodge(1.0)) +
-        scale_fill_manual(values = color_list, labels = four_labels) +
-        stat_compare_means(aes(label = paste0("p = ", ..p.format..),group = interaction(Sex, Age_cat))) +
-        labs(x = "Sex", y = "dihomo-linolenoylcarnitine levels",
-             title = "dihomo-linolenoylcarnitine") +
-        theme_Publication() +
-        theme(legend.title = element_blank()))
-
-(plmet3 <- ggplot(tot %>% filter(`dihomo-linolenoylcarnitine (C20:3n3 or 6)*` < 100), 
-               aes(x = Sex, y = `dihomo-linolenoylcarnitine (C20:3n3 or 6)*`)) +
-        geom_violin(aes(fill = Sex), position = position_dodge(1.0)) +
-        geom_boxplot(aes(group = interaction(Sex, Age_cat)), 
-                     fill = "white", width = 0.2, outlier.shape = NA,
-                     position = position_dodge(1.0)) +
-        scale_fill_manual(values = color_list, labels = four_labels) +
-        stat_compare_means(aes(label = paste0("p = ", ..p.format..))) +
-        labs(x = "Sex", y = "dihomo-linolenoylcarnitine levels",
-             title = "dihomo-linolenoylcarnitine") +
-        theme_Publication() +
-        theme(legend.title = element_blank()))
-
-mf_diff <- ggarrange(plmet1, plmet2, plmet3)
-
-#### Descriptive figure ####
+#### Assembling descriptive figure ####
 ggarrange(ggarrange(pl_sbp, pl_dbp, pl_brs, pl_sdnn, labels = c("A", "B", "C", "D"), nrow = 1), 
-          ggarrange(plC, pl_featimp, labels = c("E", "F"), nrow = 1), 
-          mf_diff, labels = c("G"), nrow = 3)
+          ggarrange(plC, pl_featimp, labels = c("E", "F"), nrow = 1), nrow = 2) 
 ggsave("results/230217_descriptives_malefemale.pdf", width = 12, height = 9)
 ggsave("results/230217_descriptives_malefemale.svg", width = 12, height = 9)
