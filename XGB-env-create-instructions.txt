@@ -1,0 +1,9 @@
+# check if conda is installed (and version)
+
+"conda info"
+
+# install conda env
+# (you can change the name / path of the environment from the yaml file, if you want)
+
+"conda env create --file xgb_mac_env.yaml"
+
