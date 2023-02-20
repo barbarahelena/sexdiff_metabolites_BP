@@ -45,10 +45,11 @@ ev_list <- list()
 groups <- c("FemY_SBP", "FemY_DBP", "MaleY_SBP", "MaleY_DBP", 
             "FemO_SBP", "FemO_DBP", "MaleO_SBP", "MaleO_DBP")
 for(g in groups){
-        li <- list.files(path = file.path(g))
+        li <- list.files(path = file.path("AgeStrata", g))
         a <- str_detect(li, regex(g, ignore_case = TRUE))
         b <- !(str_detect(li, 'PERMUTED'))
-        ev_list[[g]] <- rio::import(file.path(g, li[which(a&b)], 'aggregated_metrics_regression.txt'))
+        ev_list[[g]] <- rio::import(file.path("AgeStrata",g, li[which(a&b)], 
+                                              'aggregated_metrics_regression.txt'))
 }
 
 df <- data.frame()
@@ -68,19 +69,17 @@ df<- df %>%
 
 head(df)
 
-write.table(df, "../results/220437_expvar_youngold.csv", sep=",")
-clipr::write_clip(df)
-
+write.table(df, "results/220430_expvar_youngold.csv", sep=",")
 
 # Making table with all iterations
 ev_list2 <- list()
 groups <- c("FemY_SBP", "FemY_DBP", "MaleY_SBP", "MaleY_DBP", 
             "FemO_SBP", "FemO_DBP", "MaleO_SBP", "MaleO_DBP")
 for(g in groups){
-    li <- list.files(path = file.path(g))
+    li <- list.files(path = file.path("AgeStrata", g))
     a <- str_detect(li, regex(g, ignore_case = TRUE))
     b <- !(str_detect(li, 'PERMUTED'))
-    ev_list2[[g]] <- rio::import(file.path(g, li[which(a&b)], 'model_results_per_iteration.txt'))
+    ev_list2[[g]] <- rio::import(file.path("AgeStrata",g, li[which(a&b)], 'model_results_per_iteration.txt'))
 }
 
 df2 <- data.frame()
