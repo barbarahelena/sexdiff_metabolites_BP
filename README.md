@@ -5,13 +5,17 @@ Aim of the project: to investigate sex-specific plasma metabolite profiles that 
 
 Secondary aim: to investigate the associations between gut microbiota composition and the plasma levels of the metabolites predicting BP and HRV, since this could help target future interventions.
 
+# Paper
+A paper with more details on the methodology can be found here: [insert link]
+
 # Data
 - Clinical data including blood pressure and heart rate variability is unfortunately not publicly available because the informed consent does not allow us to make this data public. Any researcher can request the data by submitting a proposal to the HELIUS Executive Board (heliuscoordinator@amsterdamumc.nl) as outlined at http://www.heliusstudy.nl/en/researchers/collaboration. The HELIUS Executive Board will check proposals for compatibility with the general objectives, ethical approvals and informed consent forms of the HELIUS study. There are no other restrictions to obtaining the data and all data requests will be processed in the same manner. 
-- Metabolomics data: 
+- Metabolomics data: see paper for metabolomics methods.
+- Infofile metabolomics: list with identified metabolites.
 - 16S rRNA sequencing data (gut microbiota composition): The 16S sequencing data are available in the European Genome-Phenome Archive (EGA), accession number EGAS00001002969 (https://ega-archive.org/studies/EGAS00001002969).
 
 # RStudio and renv
-Most of the analyses were performed in RStudio (v) using R (v). We used renv and uploaded a snapshot in this repository.
+Most of the analyses were performed in RStudio (v.2022.7.2.576) using R (v.4.2.1). We used renv and uploaded a lockfile in this repository to reconstruct the renv.
 
 # Machine learning design
 ### Introduction
@@ -47,7 +51,7 @@ An output folder is created in the same folder as the input folder when running 
 # ToC: scripts
 The scripts shared in this repository are numbered, and are discussed below in the same order:
 
-1. Data cleaning (1_data_cleaning.R). The resulting dataframe was saved as RDS in the data folder.
+1. Data cleaning (1_data_cleaning.R). The resulting dataframes were saved as RDS in the data folder (clinical data and metabolomics data separately). From the metabolomics data, all metabolites that were labeled as xenobiotic in the infofile were excluded.
 
 2. Tables (2_tables.R): for table 1, and supplementary tables of subgroups. Results (in csv) can be found in results folder. 
 
