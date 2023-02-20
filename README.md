@@ -1,23 +1,23 @@
 # Sex differences in associations between metabolite profiles, blood pressure and heart rate variability: the HELIUS study
 
-## Project aims
+# Project aims
 Aim of the project: to investigate sex-specific plasma metabolite profiles that are associated with blood pressure and autonomic cardiovascular control, in order to better understand sex differences in hypertension. We performed machine learning analyses to predict BP, baroreceptor sensitivity (BRS) and heart rate variability (HRV) from plasma metabolite profiles for men and women separately.
 
 Secondary aim: to investigate the associations between gut microbiota composition and the plasma levels of the metabolites predicting BP and HRV, since this could help target future interventions.
 
-## Data
+# Data
 - Clinical data including blood pressure and heart rate variability is unfortunately not publicly available because the informed consent does not allow us to make this data public. Any researcher can request the data by submitting a proposal to the HELIUS Executive Board (heliuscoordinator@amsterdamumc.nl) as outlined at http://www.heliusstudy.nl/en/researchers/collaboration. The HELIUS Executive Board will check proposals for compatibility with the general objectives, ethical approvals and informed consent forms of the HELIUS study. There are no other restrictions to obtaining the data and all data requests will be processed in the same manner. 
 - Metabolomics data: 
 - 16S rRNA sequencing data (gut microbiota composition): The 16S sequencing data are available in the European Genome-Phenome Archive (EGA), accession number EGAS00001002969 (https://ega-archive.org/studies/EGAS00001002969).
 
-## RStudio and renv
+# RStudio and renv
 Most of the analyses were performed in RStudio (v) using R (v). We used renv and uploaded a snapshot in this repository.
 
-## Machine learning design
+# Machine learning design
 ### Introduction
 We used a machine learning algorithm to assess which plasma metabolites were most predictive for BP, HRV and BRS in men and women. All machine learning models used the XGBoost algorithm in a nested cross-validation design. In each iteration, the dataset was randomly split into a test set containing 20% of the subjects and a training set with the remaining 80%. Within the train set, 5-fold cross-validation was performed in order to optimize the model hyperparameters. Two random variables were added to the determinants in each iteration to serve as a benchmark. The resulting model was evaluated on the test set which yielded an area under the receiver-operator curve (AUC) for classification models, and explained variance (%) for continuous outcomes as main model quality metrics. In addition, each iteration resulted in a ranked list of metabolites with their relative importance to the prediction, with the first ranked metabolite set at 100% and the other metabolites’ importance calculated relative to the first. These were recorded for each iteration and were averaged across 200 iterations. Because of the definition of the explained variance score formula, the explained variance score could also be a negative value, meaning that the prediction is worse than an intercept. To ensure that these models were not overfitted, we ran identical models in which the data was permuted before every iteration.
 
-Machine learning design![machine learning flowchart](https://user-images.githubusercontent.com/34349946/220138280-b58d5408-0fcc-4fbd-812c-df4e402925d3.png)
+<img src="https://user-images.githubusercontent.com/34349946/220138280-b58d5408-0fcc-4fbd-812c-df4e402925d3.png" width="500" alt = "flowchart machine learning model">
 
 ### Installing conda env
 For installation of the conda environment, you will need the yaml file in this folder (xgb_mac_env.yaml). First change the name / path of the environment from the yaml file, if needed. You can install the conda environment using:
@@ -44,7 +44,7 @@ An output folder is created in the same folder as the input folder when running 
 - model_results_per_iteration.txt: main model metrics per iteration
 - system_info.txt
 
-## ToC: scripts
+# ToC: scripts
 The scripts shared in this repository are numbered, and are discussed below in the same order:
 
 1. Data cleaning (1_data_cleaning.R). The resulting dataframe was saved as RDS in the data folder.
