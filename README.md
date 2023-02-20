@@ -1,5 +1,6 @@
 # Sex differences in associations between metabolite profiles, blood pressure and heart rate variability: the HELIUS study
 
+## Project aims
 Aim of the project: to investigate sex-specific plasma metabolite profiles that are associated with blood pressure and autonomic cardiovascular control, in order to better understand sex differences in hypertension. We performed machine learning analyses to predict BP, baroreceptor sensitivity (BRS) and heart rate variability (HRV) from plasma metabolite profiles for men and women separately.
 
 Secondary aim: to investigate the associations between gut microbiota composition and the plasma levels of the metabolites predicting BP and HRV, since this could help target future interventions.
@@ -10,56 +11,78 @@ Secondary aim: to investigate the associations between gut microbiota compositio
 - 16S rRNA sequencing data (gut microbiota composition): The 16S sequencing data are available in the European Genome-Phenome Archive (EGA), accession number EGAS00001002969 (https://ega-archive.org/studies/EGAS00001002969).
 
 ## RStudio and renv
-
+Most of the analyses were performed in RStudio (v) using R (v). We used renv and uploaded a snapshot in this repository.
 
 ## Machine learning design
+We used a machine learning algorithm to assess which plasma metabolites were most predictive for BP, HRV and BRS in men and women. All machine learning models used the XGBoost algorithm in a nested cross-validation design. In each iteration, the dataset was randomly split into a test set containing 20% of the subjects and a training set with the remaining 80%. Within the train set, 5-fold cross-validation was performed in order to optimize the model hyperparameters. Two random variables were added to the determinants in each iteration to serve as a benchmark. The resulting model was evaluated on the test set which yielded an area under the receiver-operator curve (AUC) for classification models, and explained variance (%) for continuous outcomes as main model quality metrics. In addition, each iteration resulted in a ranked list of metabolites with their relative importance to the prediction, with the first ranked metabolite set at 100% and the other metabolites’ importance calculated relative to the first. These were recorded for each iteration and were averaged across 200 iterations. Because of the definition of the explained variance score formula,33 the explained variance score could also be a negative value, meaning that the prediction is worse than an intercept. To ensure that these models were not overfitted, we ran identical models in which the data was permuted before every iteration.
 
-
-
-## The scripts
+## ToC: scripts
 The scripts shared in this repository are numbered, and are discussed below in the same order:
 
-1. Data cleaning (1_data_cleaning.R)
+1. Data cleaning (1_data_cleaning.R). The resulting dataframe was saved as RDS in the data folder.
 
-2. Tables (2_tables.R): for table 1, and supplementary tables of subgroups
+2. Tables (2_tables.R): for table 1, and supplementary tables of subgroups. Results (in csv) can be found in results folder. 
 
 3. Classification models to predict sex from metabolite profiles: which metabolites are most predictive of sex?
-- Create input data (x and y) for XGBoost classification models
-- Run XGBoost classification model with bash script
-- Process output of XGBoost model
+- Create input data (x and y) for XGBoost classification models (3a_create-input-data-classification-malefemale.R). Results can be found in MaleFemale folder > input_data.
+- Run XGBoost classification model with bash script (3b_malefemale_classification.sh).
+- Process output of XGBoost model (3c_process_model_results_class_MF.R). Results can be found in MaleFemale folder > output data.
 
-4. Descriptive plots of BP and metabolites (including output of classification model above)
+4. Descriptive plots of BP and metabolites (4_descriptiveplots.R). Sex differences in systolic and diastolic BP, HRV and BRS are plotted. A PCA is drawn to assess differences and overlap between men and women. The feature importance plot from 3) is added to the figure. This figure is then saved to the results folder.
 
 5. Associations between metabolite profiles and systolic and diastolic BP:
-- Create input data (x and y) for XGBoost models
-- Run XGBoost regression model with bash script
-- Process output of XGBoost model
-- Linear regression models of best predicting metabolites and BP
+- Create input data (x and y) for XGBoost regression models (5a_create-input-data-bp.R)
+- Run XGBoost regression model with bash script (5b_BP_metabolites.sh)
+- Process output of XGBoost model (5c_process_model_results_reg_bp.R)
+- Linear regression models of best predicting metabolites and BP (5d_lm_bp_mf.R)
 
 6. Associations between metabolite profiles and baroreceptor sensitivity (BRS) and heart rate variability (HRV) (also SDNN):
-- Create input data (x and y) for XGBoost models
-- Run XGBoost regression model with bash script
-- Process output of XGBoost model
-- Linear regression models of best predicting metabolites and SDNN / BRS
-- Draw plot with explained variance of all models (SBP; DBP; HRV; BRS)
+- Create input data (x and y) for XGBoost regression models for HRV and BRS (6a_create-input-data-sdnn.R, 6b_create-input-data-brs.R)
+- Run XGBoost regression model with bash script (6c_sdnn_xbrs.sh)
+- Process output of XGBoost model (6d_process_model_results_reg_hrvbrs.R)
+- Linear regression models of best predicting metabolites and SDNN / BRS (6e_lm_bp_hrv.R)
+- Draw plot with explained variance of all models (blood pressure, HRV and BRS) (6f_explainedvariance_bp_hrv_brs.R)
 
 7. Age stratification (=< 50 years and > 50 years) for DBP and HRV models with low explained variance:
-- Create input data (x and y) for systolic and diastolic BP for XGBoost models
-- Create input data (x and y) for SDNN for XGBoost models
-- Run XGBoost regression model with bash script
-- Process output of XGBoost model
-- Draw plot with explained variance of the models young vs old
+- Create input data (x and y) for systolic and diastolic BP for XGBoost regression models (7a_create-input-data-bp-youngold.R)
+- Create input data (x and y) for SDNN for XGBoost regression models (7b_create-input-data-sdnn-youngold.R)
+- Run XGBoost regression model with bash script (7c_bp_sdnn_youngold.sh)
+- Process output of XGBoost model (7d_process_model_results_reg_youngold.R)
+- Draw plot with explained variance of the models young vs old (7e_explainedvariance_youngold.R)
 
 8. Sensitivity analysis without subjects with diabetes
-- Create input data (x and y) for systolic and diastolic BP for XGBoost models
-- Run XGBoost regression model with bash script
-- Process output of XGBoost model
-- Draw plot with explained variance of all models (SBP; DBP; HRV; BRS)
+- Create input data (x and y) for systolic and diastolic BP for XGBoost models (8a_create-input-data-nodm)
+- Run XGBoost regression model with bash script (8b_BP_nodiabetes.sh)
+- Process output of XGBoost model (8c_process_model_results_reg_nodm.R)
+- Draw plot with explained variance of all models (SBP; DBP; HRV; BRS) (8d_explainedvariance_nodm.R)
 
 9. Associations between microbiota composition (16S) and metabolite profiles
-- Create input data (x and y) for systolic and diastolic BP for XGBoost models
-- Run XGBoost regression model with bash script
-- Process output of XGBoost model
-- Draw plot with explained variance of all metabolite models with exp var > 2%
-- Linear regression models of highest ranked ASVs and metabolite levels, including models stratified for sex (supplements)
+- Create input data (x and y) for systolic and diastolic BP and SDNN for XGBoost regression models (9a_create-input-data-metabolites-sbp.R, 9b_create-input-data-metabolites-dbp.R and 9c_create-input-data-metabolites-sdnn.R)
+- Run XGBoost regression models with bash scripts (9d_metabolites_SBP.sh, 9e_metabolites_DBP.sh, 9f_metabolites_HRVMale.sh)
+- Process output of XGBoost model (9g_process_model_results_reg_metabolites.R)
+- Draw plot with explained variance of all metabolite models with exp var > 2% (9h_explainedvariance_met.R)
+- Linear regression models of highest ranked ASVs and metabolite levels, including models stratified for sex (supplements) (9i_lm_met_asvs.R)
 
+# ToC: input and output folders XGBoost models
+In this repository, the input and output data of the XGBoost models are also shared. Each folder contains an input and output folder. In alphabetical order, this repository includes the following folders:
+- AgeStrata: all age-stratified models (including Male/Female systolic and diastolic BP, and SDNN)
+- BRS: models (Male / Female) to predict baroreceptor sensitivity from metabolomics.
+- DBP: models (Male / Female) to predict diastolic BP from metabolomics.
+- MaleFemale: classfication models to predict sex from metabolomics.
+- Metabolites: all models to predict metabolite levels from 16S (gut microbiota composition) data.
+- NoDM: models for SBP and DBP in subgroup without diabetes.
+- SBP: models (Male / Female) to predict systolic BP from metabolomics.
+- SDNN: models (Male / Female) to predict SDNN (= heart rate variability) from metabolomics.
+
+# ToC: results
+Tables and figures resulting from these scripts that can be found in the results folder include:
+- Tables: table 1 (study population), table 2 (subgroup with Nexfin data), table 3 (subgroup without diabetes)
+- Figure 1: descriptive characteristics
+- Explained variance: 
+-   tables with explained variance of all models; 
+-   tables with explained variance of permuted models; 
+-   plots with explained variances of different models.
+- Linear regressions models:
+-   tables with linear regression results
+-   forest plots with estimates of linear regressions
+In addition, in each folder with the output of the XGBoost models, the results from the "process_output" scripts can be found. These include the feature importance plots and the scatter plots (regression) / violin plots (classification) for the highest ranked predictors resulting from the machine learning models. 
