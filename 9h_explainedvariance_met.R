@@ -85,8 +85,6 @@ df<- df %>%
 head(df)
 
 write.table(df, "../results/220814_expvar_met.csv", sep=",")
-clipr::write_clip(df)
-
 
 # Making table with all iterations
 ev_list2 <- list()
@@ -191,32 +189,6 @@ gem <- df3 %>% mutate(
 )
 
 
-# pl2 <- ggplot(df3, aes(x=group, y=mean_ev, group = sex, color = sex))+
-#     geom_errorbar(aes(x=group, ymin=mean_ev-sd_ev, ymax=mean_ev+sd_ev), width = 0.25) +
-#     geom_point(size=2) + 
-#     # scale_linetype_manual(values = c("dashed", "solid"), guide = guide_legend(reverse = TRUE)) +
-#     labs(title = 'Machine learning models: explained variance',
-#          x = '', y = 'AUC', linetype = '', size = '') +
-#     geom_hline(yintercept=0.5, linetype="dashed")+
-#     geom_hline(yintercept=1.0, linetype="solid")+
-#     coord_flip() +
-#     scale_y_continuous(limits = c(0.0, 1.0))+
-#     #facet_grid(group2~., switch = 'x') +
-#     #scale_x_discrete(position = "top") +
-#     scale_color_aaas(guide = FALSE) +
-#     theme_Publication() +
-#     theme(
-#         legend.position = 'bottom',
-#         legend.title = element_blank(),
-#         legend.key.width = unit(1.5, "cm"),
-#         #strip.background = element_blank(),
-#         #axis.text.y = element_blank(),
-#         #strip.text.y.left = element_text(angle = 0)
-#     )
-# pl2
-# ggsave('results/211219_AUCs_errorbar.pdf', device = 'pdf', width = 4, height = 4)
-# ggsave('results/211219_AUCs_errorbar.svg', device = 'svg', width = 4, height = 4)
-
 
 for (i in c(1:length(ev_list2))) {
         ev_list2[[i]]$met = str_c(str_split(names(ev_list2[i]), pattern = c('_'), 2, simplify = T)[,1], 
@@ -278,20 +250,6 @@ df4 <- compl %>%
 expvarfilter <- df3 %>% filter(median_ev > 0) %>% select(met)
 df4 <- df4 %>% filter(met %in% expvarfilter$met)
 
-# (pl3 <- ggplot(df4, aes(x = met, fill = met, y = ev))+
-#         geom_hline(yintercept=0.0, linetype="dashed")+
-#         geom_half_violin(side = "r", scale = "width", alpha = 0.5) +
-#         geom_half_boxplot(side = "r", fill = "white", width = 0.2, outlier.shape = NA) +
-#         ggbeeswarm::geom_beeswarm(aes(color = met), alpha = 0.5, side = 1L)+
-#         labs(title = 'Machine learning models: explained variance',
-#              x = '', y = 'Explained variance', linetype = '', size = '') +
-#         scale_y_continuous(limits = c(-30, 30), breaks = seq(-30, 30, by = 5))+
-#         scale_color_aaas(guide = "none") +
-#         scale_fill_aaas(guide = "none") +
-#         theme_Publication() +
-#         facet_wrap(~outcome, scales = "free") +
-#         theme(axis.text.x = element_text(angle = 45, hjust = 1))) 
-
 (pl3 <- df4 %>% 
         ggplot(., aes(x = met, fill = met, y = ev))+
         geom_hline(yintercept=0.0, linetype="dashed")+
@@ -324,7 +282,6 @@ for(g in expvarfilter$met){
 ann_text <- ann_text %>% mutate(met = fct_rev(met))
 
 pl3 + geom_text(data = ann_text , mapping = aes(label = str_c(lab, "%")))
-#setwd("..")
 
 ggsave("../results/220814_expvar_met_median.pdf", width = 7, height = 5)
 ggsave("../results/220814_expvar_met_median.svg", width = 7, height = 5)

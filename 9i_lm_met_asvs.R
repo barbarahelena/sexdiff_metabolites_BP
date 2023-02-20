@@ -1,5 +1,5 @@
-## LM
-## b.j.verhaar@amsterdamumc.nl
+## Linear regression models: metabolites and microbes
+## Barbara Verhaar, b.j.verhaar@amsterdamumc.nl
 
 ## Libraries
 pacman::p_load(rio, haven, Hmisc, tidyverse, tidyselect, tableone, ggsci, ggpubr,
@@ -58,8 +58,6 @@ metab_func <- function(bestpred, asvs){
         select(ASV=FeatName, RelFeatImp) %>% 
         arrange(-RelFeatImp) %>% 
         slice(1:20)
-    best_asv <- asvs %>% 
-        select(all_of(best$ASV))
     best_asv <- asvs %>% 
         select(all_of(best$ASV))
     best_asv$ID <- as.integer(rownames(best_asv))
@@ -183,8 +181,6 @@ lin_models <- function(met, df, dfname, asv, writetable = FALSE, figure = TRUE){
         }
     }
 }
-
-# & res_lin2$p < 0.05
 
 lin_strata <- function(met,df, dfname, asv, writetable = FALSE, figure = TRUE){
     theme_Publication <- function(base_size=12, base_family="sans") {
@@ -313,9 +309,7 @@ lin_strata <- function(met,df, dfname, asv, writetable = FALSE, figure = TRUE){
 
 ## Opening HELIUS file, metabolite data and best predictor files
 heliusData <- readRDS('../data/helius_malefemale.RDS')
-sampleList <- rio::import('../data/EDTA_samples.xlsx')[[3]]
-summary_metabolites <- rio::import('../data/Info_plasma_metabolites.xlsx')
-metabolites <- rio::import('../data/HELIUS_EDTA_plasma_metabolites.xlsx')
+metabolites <- readRDS('../data/HELIUS_plasma_metabolites.RDS')
 namemet <- c("sphingomyelin (d18:1/20:2, d18:2/20:1, d16:1/22:2)*",
              "sphingomyelin (d18:2/24:2)*",
              "sphingomyelin (d18:1/22:2, d18:2/22:1, d16:1/24:2)*",
@@ -326,7 +320,8 @@ namemet <- c("sphingomyelin (d18:1/20:2, d18:2/20:1, d16:1/22:2)*",
              "glycerate",
              "serotonin",
              "epiandrosterone sulfate")
-metabolites2 <- metabolites[which(metabolites$Metabolite %in% namemet),]
+metabolites2 <- metabolites[,namemet]
+metabolites2$ID <- as.integer(rownames(metabolites2))
 best_sphingo <- rio::import('Metabolites/SBP_metabolites/Male_1/output_XGB_reg_male_1_sphingomyelin_2022_03_30__16-58-21/feature_importance.txt')
 best_sphingo2 <- rio::import('Metabolites/SBP_metabolites/Male_7/output_XGB_reg_sphingomyelin2_Male_7_2022_06_09__10-30-52/feature_importance.txt')
 best_sphingo3 <- rio::import('Metabolites/SBP_metabolites/Male_8/output_XGB_reg_sphingomyelin3_Male_8_2022_06_09__11-01-30/feature_importance.txt')
@@ -342,10 +337,6 @@ asvdf <- as.data.frame(asvtable)
 asvdf <- asvdf %>% filter(rownames(.) %in% heliusData$ID)
 tax <- rio::import("../data/Taxonomy_all_ASVs_Helius.RDS")
 
-rownames(metabolites2) <- metabolites2$Metabolite
-metabolites2$Metabolite <- NULL
-metabolites2 <- as.data.frame(t(as.matrix(metabolites2)))
-metabolites2$ID <- as.integer(rownames(metabolites2))
 helius_sphingo <- left_join(heliusData, metabolites2, by='ID')
 
 ## Prepare metabolite files
@@ -359,13 +350,6 @@ helius_sphingo4_tot <- prepare(best_sphingo4, helius_sphingo, asvdf)
 helius_glycerate_tot <- prepare(best_glycerate, helius_sphingo, asvdf)
 helius_serotonin_tot <- prepare(best_serotonin, helius_sphingo, asvdf)
 helius_epiandosterone_tot <- prepare(best_epiandosterone, helius_sphingo, asvdf)
-
-# (pl1 <- lin_models(met="sphingomyelin (d18:1/20:2, d18:2/20:1, d16:1/22:2)*",df=helius_sphingo_tot, dfname="sphingomyelin", writetable = FALSE))
-# ggsave("results/lm_sphingomyelin_bestasvs.pdf", width = 6, height = 5, device = "pdf")
-# (pl2 <- lin_models(met="phenylacetate", df=helius_phenylacetate_tot, dfname="phenylacetate", writetable = FALSE))
-# ggsave("results/lm_phenylacetate_bestasvs.pdf", width = 6, height = 5, device = "pdf")
-# (pl3 <- lin_models(met="gentisate",df=helius_gentisate_tot, dfname="gentisate", writetable = FALSE))
-# ggsave("results/lm_gentisate_bestasvs.pdf", width = 6, height = 5, device = "pdf")
 
 (pl1 <- lin_models(met="sphingomyelin (d18:1/20:2, d18:2/20:1, d16:1/22:2)*",df=helius_sphingo_tot, dfname="sphingomyelin_1", writetable = FALSE))
 ggsave("results/lm_sphingomyelin_best10_mf.pdf", width = 5, height = 3, device = "pdf")
