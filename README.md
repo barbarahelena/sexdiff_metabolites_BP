@@ -35,6 +35,15 @@ As soon as the conda environment is activate, you'll need the the following item
 
 The XGBoost.py has a --help section with the possible arguments for the function.
 
+### Output of the models
+An output folder is created in the same folder as the input folder when running the model.The XGBoost python script outputs the following the results in the output folder:
+- aggregated_metrics_regression.txt: aggregated main model metrics (AUC, explained variance)
+- all_model_parameters.txt: all parameters used, partly defined by the parameter grid
+- conda_environment.txt: file that can be used to create conda environment
+- feature_importance.txt: file with the ranked metabolites and their relative importance for the model
+- model_results_per_iteration.txt: main model metrics per iteration
+- system_info.txt
+
 ## ToC: scripts
 The scripts shared in this repository are numbered, and are discussed below in the same order:
 
@@ -104,4 +113,5 @@ Tables and figures resulting from these scripts that can be found in the results
 - Linear regressions models:
   - tables with linear regression results
   - forest plots with estimates of linear regressions
+
 In addition, in each folder with the output of the XGBoost models, the results from the "process_output" scripts can be found. These include the feature importance plots and the scatter plots (regression) / violin plots (classification) for the highest ranked predictors resulting from the machine learning models. 
