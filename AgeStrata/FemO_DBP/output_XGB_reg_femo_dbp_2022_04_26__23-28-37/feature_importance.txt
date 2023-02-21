@@ -1,0 +1,725 @@
+FeatName	RelFeatImp
+N-acetylthreonine	100.0
+threonine	91.04
+N-acetylcitrulline	82.06
+serotonin	78.86
+deoxycarnitine	74.23
+N-oleoylserine	73.59
+behenoyl dihydrosphingomyelin (d18:0/22:0)*	72.86
+lignoceroyl sphingomyelin (d18:1/24:0)	72.08
+adipoylcarnitine (C6-DC)	71.55
+xanthosine	71.11
+cis-3,4-methyleneheptanoylglycine	70.97
+N-acetylasparagine	69.12
+1-methyladenosine	68.63
+citrate	68.28
+arachidonoylcholine	68.26
+indolelactate	68.24
+taurochenodeoxycholic acid 3-sulfate	68.13
+2-hydroxyphenylacetate	67.72
+N-palmitoylglycine	67.04
+indoleacetylglutamine	66.66
+N-acetylarginine	66.34
+N-acetyltyrosine	66.1
+heptanoate (7:0)	65.84
+5-methyluridine (ribothymidine)	65.42
+threonate	64.68
+pseudouridine	64.67
+methionine	63.82
+glycine	62.1
+androstenediol (3beta,17beta) monosulfate (1)	61.88
+serine	61.81
+homocitrulline	60.47
+betaine	59.88
+caproate (6:0)	59.48
+octadecanedioylcarnitine (C18-DC)*	58.52
+gamma-CEHC	57.33
+N,N,N-trimethyl-5-aminovalerate	56.49
+docosahexaenoylcholine	55.46
+vanillactate	55.36
+behenoyl sphingomyelin (d18:1/22:0)*	54.86
+3-hydroxysebacate	54.3
+heptenedioate (C7:1-DC)*	54.05
+pyroglutamine*	53.63
+4-acetamidobutanoate	53.21
+retinol (Vitamin A)	53.19
+3-hydroxyoleate*	53.13
+3-(4-hydroxyphenyl)lactate (HPLA)	52.55
+N-methylproline	52.4
+N-stearoyl-sphingadienine (d18:2/18:0)*	51.98
+isovalerate (C5)	51.37
+guanidinoacetate	51.24
+indoleacetate	51.04
+N6-carboxymethyllysine	50.89
+decanoylcarnitine (C10)	50.87
+sphingomyelin (d18:1/24:1, d18:2/24:0)*	50.31
+indoleacetoylcarnitine*	49.69
+N-acetylglutamate	48.72
+branched chain 14:0 dicarboxylic acid	48.67
+citrulline	47.57
+pimeloylcarnitine/3-methyladipoylcarnitine (C7-DC)	47.0
+N-formylmethionine	45.7
+phenylpyruvate	45.43
+urea	44.94
+2-hydroxydecanoate	44.74
+alpha-hydroxyisocaproate	44.48
+tryptophan betaine	44.13
+tryptophan	44.04
+phosphocholine	44.01
+1-stearoyl-GPG (18:0)	43.84
+picolinoylglycine	43.69
+tyrosine	43.51
+histidine	43.44
+2-oxoarginine*	43.03
+gamma-glutamyltyrosine	42.93
+tridecenedioate (C13:1-DC)*	42.74
+hydroxy-N6,N6,N6-trimethyllysine*	41.65
+xylose	41.61
+indolepropionate	41.53
+homovanillate (HVA)	41.39
+palmitoyl-sphingosine-phosphoethanolamine (d18:1/16:0)	40.92
+N-delta-acetylornithine	40.6
+N6-acetyllysine	40.58
+bilirubin degradation product, C16H18N2O5 (2)	40.48
+phenylacetylcarnitine	40.42
+3b-hydroxy-5-cholenoic acid	40.17
+linoleoylcholine*	40.13
+arabinose	40.08
+2-hydroxypalmitate	39.71
+homoarginine	39.65
+FAD	39.6
+spermidine	39.3
+ascorbic acid 2-sulfate	38.87
+N-acetyl-beta-alanine	38.67
+cholate	38.65
+1-stearoyl-2-arachidonoyl-GPI (18:0/20:4)	38.61
+dehydroepiandrosterone sulfate (DHEA-S)	38.2
+sphingomyelin (d18:2/24:2)*	37.9
+2S,3R-dihydroxybutyrate	37.77
+9-hydroxystearate	37.76
+hydantoin-5-propionate	37.66
+mannose	37.65
+glycosyl ceramide (d18:2/24:1, d18:1/24:2)*	37.5
+margaroylcarnitine (C17)*	37.34
+androstenediol (3beta,17beta) disulfate (2)	37.26
+N-stearoyl-sphingosine (d18:1/18:0)*	37.21
+quinolinate	36.77
+beta-alanine	36.75
+allantoin	36.75
+pyridoxate	36.55
+3-hydroxyhexanoylcarnitine (1)	36.26
+N-palmitoyl-sphingosine (d18:1/16:0)	36.18
+2-methylbutyrylcarnitine (C5)	36.13
+taurochenodeoxycholate	36.11
+glycochenodeoxycholate glucuronide (1)	36.06
+N-acetyl-2-aminooctanoate*	35.95
+butyrate/isobutyrate (4:0)	35.66
+glycine conjugate of C10H12O2*	35.58
+alpha-hydroxyisovalerate	35.52
+taurodeoxycholic acid 3-sulfate	35.51
+tyramine O-sulfate	35.47
+isovalerylcarnitine (C5)	35.43
+dihomo-linolenoyl-choline	35.24
+octadecenedioylcarnitine (C18:1-DC)*	35.22
+cis-3,4-methyleneheptanoate	35.13
+malate	35.01
+beta-hydroxyisovalerate	34.9
+aspartate	34.84
+sphingomyelin (d18:1/14:0, d16:1/16:0)*	34.84
+nicotinamide	34.81
+ribulonate/xylulonate/lyxonate*	34.76
+palmitoyl dihydrosphingomyelin (d18:0/16:0)*	34.55
+3-hydroxymyristate	34.52
+2-ketocaprylate	34.11
+4-guanidinobutanoate	34.09
+glutarylcarnitine (C5-DC)	34.02
+N-acetyl-isoputreanine	34.01
+3-methylglutarylcarnitine (2)	33.95
+6-oxopiperidine-2-carboxylate	33.9
+gamma-glutamylphenylalanine	33.84
+lactosyl-N-nervonoyl-sphingosine (d18:1/24:1)*	33.62
+AMP	33.61
+gamma-glutamyltryptophan	33.37
+21-hydroxypregnenolone disulfate	33.25
+L-urobilin	33.24
+cytosine	33.22
+4-hydroxyphenylpyruvate	33.07
+taurine	33.02
+carotene diol (2)	32.91
+nonanoylcarnitine (C9)	32.84
+pregnenetriol sulfate*	32.62
+cis-3,4-methyleneheptanoylcarnitine	32.54
+sphingosine 1-phosphate	32.48
+5-dodecenoylcarnitine (C12:1)	32.32
+phenylacetate	32.24
+isobutyrylglycine (C4)	32.24
+2'-O-methylcytidine	32.1
+bilirubin (E,E)*	32.03
+2R,3R-dihydroxybutyrate	31.96
+ascorbic acid 3-sulfate*	31.91
+oleoylcholine	31.9
+1-palmitoyl-GPG (16:0)*	31.7
+fumarate	31.62
+ribonate	31.44
+3-methyladipate	31.39
+3-methylhistidine	31.34
+1-stearoyl-2-linoleoyl-GPC (18:0/18:2)*	31.26
+laurylcarnitine (C12)	31.15
+creatine	30.84
+N-stearoyl-sphinganine (d18:0/18:0)*	30.84
+sphingomyelin (d18:1/20:0, d16:1/22:0)*	30.82
+5alpha-pregnan-3beta,20alpha-diol disulfate	30.75
+eicosenedioate (C20:1-DC)*	30.67
+gamma-glutamylglutamate	30.55
+etiocholanolone glucuronide	30.39
+4-hydroxy-2-oxoglutaric acid	30.35
+3-methoxytyrosine	30.35
+1-stearoyl-2-docosahexaenoyl-GPE (18:0/22:6)*	30.04
+trimethylamine N-oxide	30.04
+octadecadienedioate (C18:2-DC)*	29.8
+N-acetylserine	29.68
+11beta-hydroxyandrosterone glucuronide	29.59
+3-indoxyl sulfate	29.54
+glycosyl-N-behenoyl-sphingadienine (d18:2/22:0)*	29.52
+isovalerylglycine	29.48
+palmitoleate (16:1n7)	29.44
+taurolithocholate 3-sulfate	29.39
+N-acetylaspartate (NAA)	29.36
+phenylalanine	29.34
+isobutyrylcarnitine (C4)	29.31
+4-cholesten-3-one	29.28
+gamma-glutamylvaline	29.2
+carotene diol (1)	29.13
+nervonoylcarnitine (C24:1)*	29.04
+5-dodecenoate (12:1n7)	29.02
+gamma-glutamylmethionine	29.01
+sedoheptulose	29.01
+branched-chain, straight-chain, or cyclopropyl 10:1 fatty acid (2)*	28.72
+gentisate	28.69
+beta-citrylglutamate	28.61
+pentadecanoate (15:0)	28.59
+N-acetylneuraminate	28.57
+S-adenosylhomocysteine (SAH)	28.52
+orotate	28.51
+5alpha-androstan-3beta,17alpha-diol disulfate	28.5
+S-1-pyrroline-5-carboxylate	28.28
+asparagine	28.18
+3beta-hydroxy-5-cholestenoate	28.17
+sarcosine	28.13
+sphingomyelin (d18:0/20:0, d16:0/22:0)*	28.06
+2-hydroxyphytanate*	27.98
+glycochenodeoxycholate 3-sulfate	27.98
+myristoleoylcarnitine (C14:1)*	27.93
+sphinganine	27.9
+random_variable1	27.81
+galactonate	27.79
+bilirubin degradation product, C17H20N2O5 (1)	27.75
+5alpha-androstan-3alpha,17alpha-diol monosulfate	27.74
+argininate*	27.67
+bilirubin degradation product, C16H18N2O5 (1)	27.63
+3-hydroxyadipate*	27.59
+alpha-ketoglutaramate*	27.53
+1-palmitoleoyl-GPC* (16:1)*	27.31
+9,10-DiHOME	27.13
+dodecadienoate (12:2)*	27.04
+undecanoate (11:0)	26.81
+oleoyl ethanolamide	26.79
+caprylate (8:0)	26.72
+sphingomyelin (d18:1/22:1, d18:2/22:0, d16:1/24:1)*	26.7
+1-(1-enyl-stearoyl)-2-arachidonoyl-GPE (P-18:0/20:4)*	26.55
+2-hydroxyglutarate	26.42
+5alpha-pregnan-3beta,20beta-diol monosulfate (1)	26.39
+stearoylcholine*	26.38
+cysteine	26.38
+tetradecanedioate (C14)	26.38
+erythronate*	26.27
+glutamine conjugate of C6H10O2 (2)*	26.25
+vanillylmandelate (VMA)	26.12
+12,13-DiHOME	26.08
+glutarate (C5-DC)	26.0
+3-hydroxybutyrate (BHBA)	25.97
+branched-chain, straight-chain, or cyclopropyl 10:1 fatty acid (1)*	25.77
+proline	25.72
+dihomo-linoleoylcarnitine (C20:2)*	25.7
+undecanedioate (C11-DC)	25.62
+1-oleoyl-GPI (18:1)	25.49
+taurocholenate sulfate*	25.38
+androstenediol (3alpha, 17alpha) monosulfate (3)	25.36
+3-methylglutaconate	25.34
+bilirubin degradation product, C17H20N2O5 (2)	25.29
+1-(1-enyl-palmitoyl)-GPE (P-16:0)*	25.29
+dodecenedioate (C12:1-DC)*	25.26
+N-formylanthranilic acid	25.17
+N-acetylkynurenine (2)	25.16
+bilirubin degradation product, C16H18N2O5 (4)	25.15
+pelargonate (9:0)	25.13
+cysteinylglycine	25.13
+1-methylhistidine	25.1
+maleate	24.96
+bilirubin degradation product, C16H18N2O5 (3)	24.91
+N2,N5-diacetylornithine	24.87
+prolylglycine	24.85
+3-amino-2-piperidone	24.84
+androstenediol (3beta,17beta) monosulfate (2)	24.8
+arachidonoylcarnitine (C20:4)	24.77
+hydroxy-CMPF*	24.71
+corticosterone	24.55
+N,N,N-trimethyl-alanylproline betaine (TMAP)	24.54
+2-hydroxyoctanoate	24.51
+fructose	24.4
+sphingomyelin (d18:2/14:0, d18:1/14:1)*	24.35
+dodecanedioate (C12)	24.32
+5,6-dihydrouridine	24.31
+1-stearoyl-2-oleoyl-GPE (18:0/18:1)	24.22
+arabonate/xylonate	24.22
+kynurenine	24.15
+1-(1-enyl-palmitoyl)-2-palmitoyl-GPC (P-16:0/16:0)*	24.13
+1-palmitoyl-2-oleoyl-GPC (16:0/18:1)	24.09
+stearoylcarnitine (C18)	24.04
+gamma-glutamylisoleucine*	24.04
+caprate (10:0)	24.01
+5alpha-androstan-3beta,17beta-diol disulfate	24.0
+cortisol	23.96
+cys-gly, oxidized	23.85
+maltose	23.84
+glycerate	23.79
+2-aminoheptanoate	23.73
+bilirubin	23.72
+2-aminooctanoate	23.56
+lithocholate sulfate (1)	23.51
+azelate (C9-DC)	23.49
+3-hydroxyisobutyrate	23.46
+N-acetylglutamine	23.45
+1-palmitoyl-GPE (16:0)	23.41
+1-linoleoyl-2-linolenoyl-GPC (18:2/18:3)*	23.41
+glycoursodeoxycholate	23.36
+bilirubin (E,Z or Z,E)*	23.36
+ethylmalonate	23.35
+glycosyl ceramide (d18:1/20:0, d16:1/22:0)*	23.34
+hexanoylglycine (C6)	23.31
+pristanate	23.23
+andro steroid monosulfate C19H28O6S (1)*	23.11
+lactate	23.05
+gamma-carboxyglutamate	23.0
+1-palmitoyl-2-palmitoleoyl-GPC (16:0/16:1)*	22.99
+decadienedioic acid (C10:2-DC)	22.96
+N-palmitoyl-sphinganine (d18:0/16:0)	22.91
+dopamine 4-sulfate	22.81
+5,6-dihydrouracil	22.74
+glutamine	22.74
+androstenediol (3beta,17beta) disulfate (1)	22.72
+hexadecanedioate (C16)	22.7
+ornithine	22.69
+lactosyl-N-palmitoyl-sphingosine (d18:1/16:0)	22.68
+ribitol	22.67
+undecenoylcarnitine (C11:1)	22.67
+sphingomyelin (d17:2/16:0, d18:2/15:0)*	22.64
+glycocholenate sulfate*	22.55
+tricosanoyl sphingomyelin (d18:1/23:0)*	22.53
+carotene diol (3)	22.42
+methylsuccinate	22.41
+glycolithocholate sulfate*	22.37
+hexadecenedioate (C16:1-DC)*	22.36
+gamma-glutamylleucine	22.32
+alpha-tocopherol	22.32
+2-stearoyl-GPE (18:0)*	22.29
+1-stearoyl-2-linoleoyl-GPI (18:0/18:2)	22.27
+4-hydroxyphenylacetate	22.27
+alpha-hydroxycaproate	22.27
+tiglyl carnitine (C5)	22.26
+1-oleoyl-2-docosahexaenoyl-GPC (18:1/22:6)*	22.21
+octadecanedioate (C18)	22.12
+5alpha-androstan-3alpha,17beta-diol disulfate	22.09
+isoleucylglycine	22.05
+3-hydroxy-2-ethylpropionate	22.04
+2,3-dihydroxy-2-methylbutyrate	22.01
+cysteine s-sulfate	21.97
+dihydroorotate	21.93
+1-palmitoyl-2-linoleoyl-GPC (16:0/18:2)	21.9
+erucate (22:1n9)	21.88
+sphingomyelin (d18:1/22:2, d18:2/22:1, d16:1/24:2)*	21.87
+3-carboxy-4-methyl-5-propyl-2-furanpropanoate (CMPF)	21.85
+arabitol/xylitol	21.82
+mannitol/sorbitol	21.78
+glycolithocholate	21.73
+hydroxyproline	21.71
+octanoylcarnitine (C8)	21.69
+3-(3-amino-3-carboxypropyl)uridine*	21.68
+2-hydroxybutyrate/2-hydroxyisobutyrate	21.64
+1-stearoyl-GPC (18:0)	21.6
+arginine	21.55
+N-acetylcarnosine	21.49
+3-hydroxy-3-methylglutarate	21.46
+docosahexaenoylcarnitine (C22:6)*	21.38
+pregnenolone sulfate	21.35
+sphinganine-1-phosphate	21.29
+6-bromotryptophan	21.27
+N-acetylalanine	21.27
+xanthurenate	21.21
+lignoceroylcarnitine (C24)*	21.12
+cysteine-glutathione disulfide	21.08
+3-carboxy-4-methyl-5-pentyl-2-furanpropionate (3-CMPFP)	21.05
+1-linoleoylglycerol (18:2)	21.0
+2-arachidonoylglycerol (20:4)	20.95
+dihomo-linolenoylcarnitine (C20:3n3 or 6)*	20.68
+4-hydroxyphenylacetylglutamine	20.68
+nonadecanoate (19:0)	20.66
+10-heptadecenoate (17:1n7)	20.64
+1-palmitoyl-GPA (16:0)	20.51
+sphingomyelin (d18:0/18:0, d19:0/17:0)*	20.49
+3-methoxytyramine sulfate	20.4
+propionylglycine (C3)	20.31
+nisinate (24:6n3)	20.25
+3-aminoisobutyrate	20.24
+uracil	20.24
+imidazole lactate	20.1
+acetylcarnitine (C2)	19.95
+N-acetyltaurine	19.9
+bilirubin degradation product, C17H18N2O4 (1)	19.9
+1-arachidonoyl-GPC* (20:4)*	19.82
+epiandrosterone sulfate	19.82
+1-palmitoyl-2-oleoyl-GPE (16:0/18:1)	19.75
+1-palmitoyl-2-oleoyl-GPI (16:0/18:1)*	19.7
+N2-acetyl,N6,N6-dimethyllysine	19.67
+4-methylhexanoylglutamine	19.59
+hexadecadienoate (16:2n6)	19.59
+alpha-CMBHC glucuronide	19.55
+1-stearoyl-2-linoleoyl-GPE (18:0/18:2)*	19.52
+glycine conjugate of C10H14O2 (1)*	19.44
+gamma-glutamylthreonine	19.44
+glycochenodeoxycholate	19.41
+deoxycholic acid glucuronide	19.38
+2-hydroxystearate	19.36
+sphingomyelin (d17:1/14:0, d16:1/15:0)*	19.34
+pantothenate (Vitamin B5)	19.33
+methionine sulfoxide	19.33
+N6,N6-dimethyllysine	19.27
+lysine	19.24
+gamma-tocopherol/beta-tocopherol	19.18
+acisoga	19.17
+S-methylcysteine	19.15
+2-linoleoylglycerol (18:2)	19.01
+eicosenoylcarnitine (C20:1)*	18.99
+docosadioate (C22-DC)	18.94
+1-palmitoyl-2-arachidonoyl-GPI (16:0/20:4)*	18.87
+trans-urocanate	18.87
+N-methyltaurine	18.84
+1-oleoylglycerol (18:1)	18.84
+maltotriose	18.83
+glycocholate	18.82
+glycerol 3-phosphate	18.8
+trigonelline (N'-methylnicotinate)	18.76
+pregnenediol sulfate (C21H34O5S)*	18.75
+palmitoylcarnitine (C16)	18.68
+3,4-dihydroxybutyrate	18.67
+bilirubin degradation product, C17H18N2O4 (3)	18.66
+1-palmitoleoyl-2-linolenoyl-GPC (16:1/18:3)*	18.66
+dimethylarginine (ADMA + SDMA)	18.65
+glyco-beta-muricholate	18.61
+aconitate [cis or trans]	18.59
+1-palmitoyl-2-linoleoyl-GPI (16:0/18:2)	18.57
+1-stearoyl-2-arachidonoyl-GPS (18:0/20:4)	18.55
+oxalate (ethanedioate)	18.53
+methylmalonate (MMA)	18.5
+thyroxine	18.5
+pipecolate	18.47
+taurodeoxycholate	18.43
+pregnenetriol disulfate*	18.39
+2-oleoylglycerol (18:1)	18.36
+pregnen-diol disulfate*	18.35
+hyocholate	18.28
+N4-acetylcytidine	18.25
+gamma-glutamylglutamine	18.25
+sphingomyelin (d18:1/21:0, d17:1/22:0, d16:1/23:0)*	18.2
+glucuronate	18.19
+N-formylphenylalanine	18.16
+glycohyocholate	18.16
+succinate	18.15
+5alpha-pregnan-3beta,20alpha-diol monosulfate (2)	18.14
+1-palmitoyl-2-docosahexaenoyl-GPE (16:0/22:6)*	18.11
+prolylhydroxyproline	18.08
+3-ureidopropionate	18.06
+N-acetylglucosamine/N-acetylgalactosamine	18.01
+N1-Methyl-2-pyridone-5-carboxamide	18.0
+1-(1-enyl-palmitoyl)-2-arachidonoyl-GPE (P-16:0/20:4)*	17.97
+cerotoylcarnitine (C26)*	17.97
+1-stearoyl-GPI (18:0)	17.97
+5-oxoproline	17.96
+1-linolenoyl-GPC (18:3)*	17.93
+uridine	17.91
+ximenoylcarnitine (C26:1)*	17.82
+eicosanedioate (C20-DC)	17.79
+cortisone	17.78
+N6,N6,N6-trimethyllysine	17.74
+carnitine	17.68
+metabolonic lactone sulfate	17.67
+5,6-dihydrothymine	17.66
+androstenediol (3alpha, 17alpha) monosulfate (2)	17.61
+myristoylcarnitine (C14)	17.55
+linoleoylcarnitine (C18:2)*	17.53
+linolenoylcarnitine (C18:3)*	17.49
+dopamine 3-O-sulfate	17.48
+1-arachidonylglycerol (20:4)	17.44
+1-palmitoyl-2-arachidonoyl-GPC (16:0/20:4n6)	17.39
+sphingomyelin (d18:2/18:1)*	17.32
+random_variable2	17.32
+heneicosapentaenoate (21:5n3)	17.25
+valylglycine	17.23
+cortolone glucuronide (1)	17.22
+1-oleoyl-GPE (18:1)	17.19
+7-methylguanine	17.13
+phosphate	17.09
+1-(1-enyl-stearoyl)-2-linoleoyl-GPE (P-18:0/18:2)*	17.07
+glycosyl-N-palmitoyl-sphingosine (d18:1/16:0)	17.04
+phenylacetylglutamate	16.98
+N-palmitoylserine	16.95
+xanthine	16.93
+androsterone sulfate	16.93
+cis-4-decenoate (10:1n6)*	16.92
+3-hydroxyhexanoate	16.89
+androsterone glucuronide	16.84
+5-hydroxylysine	16.83
+methionine sulfone	16.82
+1-linoleoyl-2-arachidonoyl-GPC (18:2/20:4n6)*	16.8
+1-carboxyethylvaline	16.8
+phosphoethanolamine (PE)	16.73
+1-linoleoyl-GPG (18:2)*	16.72
+beta-cryptoxanthin	16.68
+1-oleoyl-GPG (18:1)*	16.59
+myristoleate (14:1n5)	16.59
+indole-3-carboxylate	16.57
+N6-methyllysine	16.51
+10-nonadecenoate (19:1n9)	16.49
+butyrylcarnitine (C4)	16.48
+gamma-glutamylglycine	16.46
+N6-succinyladenosine	16.44
+laurate (12:0)	16.44
+3-hydroxyoleoylcarnitine	16.4
+3-hydroxybutyroylglycine	16.39
+pyruvate	16.39
+1-carboxyethylleucine	16.33
+2'-O-methyluridine	16.27
+2-hydroxy-3-methylvalerate	16.22
+5alpha-pregnan-diol disulfate	16.19
+hypoxanthine	16.17
+glycodeoxycholate 3-sulfate	16.15
+2-palmitoyl-GPC* (16:0)*	16.12
+10-undecenoate (11:1n1)	16.07
+cholic acid glucuronide	16.04
+glucuronide of C10H18O2 (7)*	16.03
+octadecenedioate (C18:1-DC)	16.01
+1-myristoyl-2-palmitoyl-GPC (14:0/16:0)	15.98
+eicosapentaenoylcholine	15.86
+glycocholate sulfate	15.83
+5alpha-androstan-3beta,17beta-diol monosulfate (2)	15.79
+alpha-ketobutyrate	15.72
+N-oleoyltaurine	15.72
+cis-4-decenoylcarnitine (C10:1)	15.72
+4-oxo-retinoic acid	15.7
+ursodeoxycholate	15.61
+N-acetylvaline	15.6
+valine	15.58
+stearidonate (18:4n3)	15.54
+1-palmitoyl-GPC (16:0)	15.51
+choline	15.47
+1-(1-enyl-palmitoyl)-2-linoleoyl-GPE (P-16:0/18:2)*	15.38
+inosine	15.38
+cysteinylglycine disulfide*	15.33
+gulonate*	15.32
+alanine	15.3
+deoxycholic acid 12-sulfate*	15.3
+N-palmitoyltaurine	15.08
+sphingomyelin (d18:2/16:0, d18:1/16:1)*	15.08
+sphingomyelin (d18:1/18:1, d18:2/18:0)	15.04
+hydroxypalmitoyl sphingomyelin (d18:1/16:0(OH))	15.02
+16a-hydroxy DHEA 3-sulfate	15.02
+sphingosine	14.94
+1-dihomo-linolenylglycerol (20:3)	14.93
+alpha-ketoglutarate	14.85
+palmitoyl ethanolamide	14.83
+1-stearoyl-2-oleoyl-GPS (18:0/18:1)	14.77
+1-palmitoyl-2-arachidonoyl-GPE (16:0/20:4)*	14.74
+4-methoxyphenol sulfate	14.64
+13-HODE + 9-HODE	14.61
+p-cresol glucuronide*	14.58
+1-(1-enyl-stearoyl)-GPE (P-18:0)*	14.44
+glycerophosphoethanolamine	14.41
+2-aminobutyrate	14.39
+palmitoylcholine	14.38
+1-stearoyl-2-arachidonoyl-GPE (18:0/20:4)	14.35
+1-palmitoyl-2-docosahexaenoyl-GPC (16:0/22:6)	14.25
+C-glycosyltryptophan	14.13
+1-oleoyl-2-linoleoyl-GPE (18:1/18:2)*	14.13
+hexanoylcarnitine (C6)	14.09
+sphingomyelin (d18:1/20:2, d18:2/20:1, d16:1/22:2)*	14.02
+orotidine	13.98
+taurocholate	13.97
+1-palmitoyl-2-linoleoyl-GPE (16:0/18:2)	13.96
+5alpha-androstan-3alpha,17beta-diol monosulfate (1)	13.94
+16-hydroxypalmitate	13.92
+3-hydroxyoctanoate	13.9
+5-methylthioadenosine (MTA)	13.87
+1-linoleoyl-GPE (18:2)*	13.84
+7-HOCA	13.81
+behenoylcarnitine (C22)*	13.78
+3-hydroxyoctanoylcarnitine (1)	13.76
+isoursodeoxycholate	13.74
+gamma-glutamylhistidine	13.68
+glutamine conjugate of C7H12O2*	13.68
+valerate (5:0)	13.67
+N-acetyltryptophan	13.65
+phenol sulfate	13.63
+sphingomyelin (d18:2/23:1)*	13.58
+1-carboxyethylphenylalanine	13.51
+1-stearoyl-2-oleoyl-GPC (18:0/18:1)	13.47
+1-stearoyl-2-arachidonoyl-GPC (18:0/20:4)	13.47
+myristoyl dihydrosphingomyelin (d18:0/14:0)*	13.45
+gamma-glutamyl-alpha-lysine	13.43
+sphingomyelin (d18:2/23:0, d18:1/23:1, d17:1/24:1)*	13.39
+1-(1-enyl-palmitoyl)-2-arachidonoyl-GPC (P-16:0/20:4)*	13.34
+tetradecadienoate (14:2)*	13.32
+1-lignoceroyl-GPC (24:0)	13.28
+1-palmitoyl-2-dihomo-linolenoyl-GPC (16:0/20:3n3 or 6)*	13.25
+hypotaurine	13.22
+cystine	13.2
+1-(1-enyl-oleoyl)-GPE (P-18:1)*	13.18
+myo-inositol	13.15
+3-methyl-2-oxovalerate	13.11
+leucine	13.05
+glutamate	13.03
+pregnanediol-3-glucuronide	12.97
+glucose	12.97
+3-hydroxylaurate	12.91
+bilirubin degradation product, C17H18N2O4 (2)	12.9
+sphingomyelin (d17:1/16:0, d18:1/15:0, d16:1/17:0)*	12.88
+1-carboxyethylisoleucine	12.83
+fructosyllysine	12.8
+5-hydroxyhexanoate	12.8
+kynurenate	12.79
+sphingomyelin (d18:2/21:0, d16:2/23:0)*	12.78
+tetradecadienedioate (C14:2-DC)*	12.76
+glycodeoxycholate	12.76
+17alpha-hydroxypregnenolone 3-sulfate	12.72
+1-(1-enyl-palmitoyl)-2-palmitoleoyl-GPC (P-16:0/16:1)*	12.63
+phenyllactate (PLA)	12.58
+8-hydroxyoctanoate	12.54
+1-myristoyl-2-arachidonoyl-GPC (14:0/20:4)*	12.52
+N2-acetyl,N6-methyllysine	12.5
+1-methylnicotinamide	12.48
+3-phosphoglycerate	12.34
+1-linoleoyl-GPI* (18:2)*	12.34
+1-(1-enyl-stearoyl)-2-oleoyl-GPE (P-18:0/18:1)	12.33
+3-hydroxydecanoate	12.29
+cholesterol	12.27
+sphingomyelin (d18:2/24:1, d18:1/24:2)*	12.25
+acetoacetate	12.22
+3-methyl-2-oxobutyrate	12.16
+cystathionine	12.16
+1-palmitoyl-2-stearoyl-GPC (16:0/18:0)	12.14
+arachidate (20:0)	12.12
+glycosyl-N-stearoyl-sphingosine (d18:1/18:0)	12.12
+N-acetylglycine	12.1
+sucrose	12.1
+2,3-dihydroxy-5-methylthio-4-pentenoate (DMTPA)*	12.08
+1-arachidonoyl-GPE (20:4n6)*	12.01
+1-stearoyl-GPE (18:0)	12.01
+1-stearoyl-2-docosahexaenoyl-GPC (18:0/22:6)	11.9
+creatinine	11.87
+1-(1-enyl-palmitoyl)-2-oleoyl-GPE (P-16:0/18:1)*	11.83
+3-hydroxyoctanoylcarnitine (2)	11.77
+S-methylmethionine	11.77
+4-methyl-2-oxopentanoate	11.73
+dimethylglycine	11.68
+N-palmitoyl-sphingadienine (d18:2/16:0)*	11.64
+branched-chain, straight-chain, or cyclopropyl 12:1 fatty acid*	11.6
+N6-carbamoylthreonyladenosine	11.55
+1-(1-enyl-palmitoyl)-GPC (P-16:0)*	11.53
+lithocholic acid sulfate (2)	11.38
+N1-methylinosine	11.37
+sphingomyelin (d18:1/19:0, d19:1/18:0)*	11.36
+biliverdin	11.36
+adrenate (22:4n6)	11.24
+1-arachidonoyl-GPI* (20:4)*	11.19
+1-linoleoyl-GPC (18:2)	11.19
+1-oleoyl-GPC (18:1)	11.13
+1-(1-enyl-palmitoyl)-2-linoleoyl-GPC (P-16:0/18:2)*	11.03
+glycerophosphorylcholine (GPC)	10.89
+1-palmitoleoylglycerol (16:1)*	10.88
+glutamine conjugate of C6H10O2 (1)*	10.78
+1-palmitoyl-GPI* (16:0)	10.69
+cytidine	10.67
+S-methylcysteine sulfoxide	10.53
+Fibrinopeptide B (1-13)	10.5
+sphingomyelin (d18:1/20:1, d18:2/20:0)*	10.47
+hydroxyasparagine	10.35
+1-(1-enyl-palmitoyl)-2-oleoyl-GPC (P-16:0/18:1)*	10.19
+1-ribosyl-imidazoleacetate*	10.15
+sphingomyelin (d18:1/25:0, d19:0/24:1, d20:1/23:0, d19:1/24:0)*	10.12
+(N(1) + N(8))-acetylspermidine	9.96
+propionylcarnitine (C3)	9.91
+oleate/vaccenate (18:1)	9.88
+1,5-anhydroglucitol (1,5-AG)	9.64
+N-stearoyltaurine	9.62
+palmitoleoylcarnitine (C16:1)*	9.58
+eicosenoate (20:1n9 or 1n11)	9.53
+linolenate (18:3n3 or 3n6)	9.49
+gamma-glutamylalanine	9.43
+I-urobilinogen	9.41
+maltotetraose	9.29
+N-acetylhistidine	9.29
+dihomolinolenate (20:3n3 or 3n6)	9.23
+GlcNAc sulfate conjugate of C21H34O2 steroid	9.21
+stearate (18:0)	9.19
+N-acetylphenylalanine	9.19
+pregnanolone/allopregnanolone sulfate	9.16
+1-methyl-4-imidazoleacetate	9.1
+1,2-dipalmitoyl-GPC (16:0/16:0)	8.97
+palmitoyl sphingomyelin (d18:1/16:0)	8.94
+urate	8.92
+linoleate (18:2n6)	8.83
+succinylcarnitine (C4-DC)	8.78
+sphingomyelin (d18:1/17:0, d17:1/18:0, d19:1/16:0)	8.61
+arachidonate (20:4n6)	8.6
+isoleucine	8.56
+(R)-3-hydroxybutyrylcarnitine	8.55
+glycosyl ceramide (d18:1/23:1, d17:1/24:1)*	8.53
+pentose acid*	8.5
+1,2-dilinoleoyl-GPC (18:2/18:2)	8.5
+anthranilate	8.34
+phenylacetylglutamine	8.29
+sebacate (C10-DC)	8.22
+glycerol	8.17
+hexanoylglutamine	8.07
+phenol glucuronide	8.04
+N-acetylputrescine	7.95
+suberate (C8-DC)	7.87
+5-(galactosylhydroxy)-L-lysine	7.67
+(S)-3-hydroxybutyrylcarnitine	7.66
+dihomolinoleate (20:2n6)	7.65
+2-hydroxyadipate	7.58
+allo-threonine	7.54
+margarate (17:0)	7.35
+stearoyl sphingomyelin (d18:1/18:0)	7.19
+N-acetylmethionine	7.17
+(16 or 17)-methylstearate (a19:0 or i19:0)	6.98
+N-palmitoyl-heptadecasphingosine (d17:1/16:0)*	6.96
+ADSGEGDFXAEGGGVR*	6.58
+docosadienoate (22:2n6)	6.57
+palmitate (16:0)	6.27
+oleoylcarnitine (C18:1)	5.6
+DSGEGDFXAEGGGVR*	5.23
+glucuronide of C10H18O2 (1)*	4.69
+formiminoglutamate	4.69
+tauro-beta-muricholate	4.63
+pimelate (C7-DC)	4.05
+myristate (14:0)	3.64
+5alpha-androstan-3alpha,17beta-diol monosulfate (2)	3.31
+N2,N2-dimethylguanosine	2.77
+5alpha-androstan-3alpha,17beta-diol 17-glucuronide	1.67
+tauroursodeoxycholate	1.6
+glucuronide of C10H18O2 (8)*	1.55
+taurohyocholate*	1.34
+taurolithocholate	1.22
+ADpSGEGDFXAEGGGVR*	0.38
+tauroursodeoxycholic acid sulfate (1)	0.26
+Fibrinopeptide A (3-16)	0.17

@@ -1,0 +1,2 @@
+Median R2	Median Explained Variance	Median RMSE	Median MAE
+0.0183	0.0323	0.4511	0.2576

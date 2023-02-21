@@ -1,0 +1,13 @@
+========================================System Information========================================
+
+System: Darwin
+Node Name: MacBookBarbara.local
+Release: 20.6.0
+Version: Darwin Kernel Version 20.6.0: Tue Jun 21 20:50:28 PDT 2022; root:xnu-7195.141.32~1/RELEASE_X86_64
+Processor: i386
+
+========================================CPU Info========================================
+
+Physical cores: 4
+
+Total cores: 8

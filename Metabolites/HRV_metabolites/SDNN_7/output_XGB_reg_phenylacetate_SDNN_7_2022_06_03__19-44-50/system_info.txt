@@ -1,0 +1,13 @@
+========================================System Information========================================
+
+System: Darwin
+Node Name: Barbara.home
+Release: 20.6.0
+Version: Darwin Kernel Version 20.6.0: Tue Feb 22 21:10:41 PST 2022; root:xnu-7195.141.26~1/RELEASE_X86_64
+Processor: i386
+
+========================================CPU Info========================================
+
+Physical cores: 4
+
+Total cores: 8
