@@ -156,7 +156,7 @@ lin_models <- function(met, df, dfname, asv, writetable = FALSE, figure = TRUE){
             li <- res_lin2 %>% filter(interaction < 0.05) %>% select(ASV)
             print(res_lin2)
             print(li)
-            ylab <- "Metabolite change per log10 increase in microbe"
+            ylab <- "Change in metabolite (SD) per log10 increase in ASV"
             colors <- pal_lancet()(1)
             
             pl1 <- res_lin2 %>%  
@@ -282,7 +282,7 @@ lin_strata <- function(met,df, dfname, asv, writetable = FALSE, figure = TRUE){
 
             li <- res_lin2 %>% filter(interaction < 0.05) %>% select(ASV) %>% filter(duplicated(.))
             print(li)
-            ylab <- "Metabolite change for log10 increase in microbe"
+            ylab <- "Change in metabolite (SD) per log10 increase in ASV"
             colors <- rev(pal_lancet()(2))
 
             pl1 <- res_lin2 %>%
@@ -427,4 +427,3 @@ ggsave("results/220814_lm_metabolites_top10_mf.pdf", height = 12, width = 10)
 (pl6 <- lin_models(met="gentisate",df=helius_gentisate_tot, dfname="gentisate", writetable = TRUE, figure = FALSE))
 (pl7 <- lin_models(met="sphingomyelin (d18:1/20:0, d16:1/22:0)*",df=helius_sphingo4_tot, dfname="SM 38:1", writetable = TRUE, figure = FALSE))
 (pl8 <- lin_models(met="glycerate",df=helius_sphingo2_tot, dfname="glycerate", writetable = TRUE, figure = FALSE))
-
