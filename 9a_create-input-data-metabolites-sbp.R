@@ -34,22 +34,15 @@ write_y <- function(x, name_y, data_path){
 }
 
 # open data
-featimp_fem <- rio::import("Fem/SBP/output_XGB_reg_Fem_SBP_2020_11_11__21-19-13/feature_importance.txt")
-featimp_male <- rio::import("Male/SBP/output_XGB_reg_Male_SBP_2020_11_11__22-19-04/feature_importance.txt")
-dd <- readxl::read_xlsx('../data/HELIUS_EDTA_plasma_metabolites.xlsx')
+featimp_fem <- rio::import("SBP/Female/output_XGB_reg_Fem_SBP_2020_11_11__21-19-13/feature_importance.txt")
+featimp_male <- rio::import("SBP/Male/output_XGB_reg_Male_SBP_2020_11_11__22-19-04/feature_importance.txt")
+dd <- readRDS('../data/HELIUS_plasma_metabolites.RDS')
 d <- readRDS('../data/HELIUS_ASV_table_all.RDS')
 
 ## Prep outcome data
-met <- dd$Metabolite
-dd$Metabolite <- NULL
-head(dd)
-dd2 <- as.data.frame(t(as.matrix(dd)))
-dim(dd)
-colnames(dd2)
-colnames(dd2) <- met
-rownames(dd2) <- paste0('S', rownames(dd2))
+rownames(dd) <- paste0('S', rownames(dd))
 listmet <- c(featimp_fem[1:10, 1], featimp_male[1:10, 1])
-dd2 <- dd2 %>% select(all_of(listmet))
+dd2 <- dd[,listmet]
 dd2$ID <- rownames(dd2)
 
 ## Prep input data
