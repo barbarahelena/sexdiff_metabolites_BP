@@ -114,7 +114,7 @@ Tables and figures resulting from these scripts that can be found in the results
 - Explained variance: 
   - tables with explained variance of all models; 
   - tables with explained variance of permuted models; 
-  - plots with explained variances of different models.
+  - plots with explained variances of BP, HRV, BRS and metabolite models.
 - Linear regressions models:
   - tables with linear regression results
   - forest plots with estimates of linear regressions
