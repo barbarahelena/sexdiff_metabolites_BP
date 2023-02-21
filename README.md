@@ -1,7 +1,7 @@
 # Sex differences in associations between metabolite profiles, blood pressure and heart rate variability: the HELIUS study
 
 # Project aims
-Aim of the project: to investigate sex-specific plasma metabolite profiles that are associated with blood pressure and autonomic cardiovascular control, in order to better understand sex differences in hypertension. We performed machine learning analyses to predict BP, baroreceptor sensitivity (BRS) and heart rate variability (HRV) from plasma metabolite profiles for men and women separately.
+Primary aim: to investigate sex-specific plasma metabolite profiles that are associated with blood pressure and autonomic cardiovascular control, in order to better understand sex differences in hypertension. We performed machine learning analyses to predict BP, baroreceptor sensitivity (BRS) and heart rate variability (HRV) from plasma metabolite profiles for men and women separately.
 
 Secondary aim: to investigate the associations between gut microbiota composition and the plasma levels of the metabolites predicting BP and HRV, since this could help target future interventions.
 
