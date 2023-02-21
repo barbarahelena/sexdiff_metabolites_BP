@@ -1,0 +1,13 @@
+========================================System Information========================================
+
+System: Linux
+Node Name: Linux-Laptop
+Release: 5.4.0-52-generic
+Version: #57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+Processor: x86_64
+
+========================================CPU Info========================================
+
+Physical cores: 6
+
+Total cores: 12
