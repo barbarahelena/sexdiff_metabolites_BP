@@ -12,7 +12,7 @@ A paper with more details on the methodology can be found here: [insert link]
 - Clinical data including blood pressure and heart rate variability is unfortunately not publicly available because the informed consent does not allow us to make this data public. Any researcher can request the data by submitting a proposal to the HELIUS Executive Board (heliuscoordinator@amsterdamumc.nl) as outlined at http://www.heliusstudy.nl/en/researchers/collaboration. The HELIUS Executive Board will check proposals for compatibility with the general objectives, ethical approvals and informed consent forms of the HELIUS study. There are no other restrictions to obtaining the data and all data requests will be processed in the same manner. 
 - Metabolomics data: see paper for metabolomics methods.
 - Infofile metabolomics: list with identified metabolites.
-- 16S rRNA sequencing data (gut microbiota composition): The 16S sequencing data are available in the European Genome-Phenome Archive (EGA), accession number EGAS00001002969 (https://ega-archive.org/studies/EGAS00001002969).
+- 16S rRNA sequencing data (gut microbiota composition): The 16S sequencing data are available in the European Nucleotide Archive (ENA), accession number [EGAS00001002969](https://www.ebi.ac.uk/ena/browser/view/PRJEB25863).
 
 # RStudio and renv
 Most of the analyses were performed in RStudio (v.2022.7.2.576) using R (v.4.2.1). We used renv and uploaded a lockfile in this repository to reconstruct the renv.
