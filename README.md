@@ -1,7 +1,7 @@
 # Sex differences in associations between metabolite profiles, blood pressure and heart rate variability: the HELIUS study
 
 # Project aims
-Aim of the project: to investigate sex-specific plasma metabolite profiles that are associated with blood pressure and autonomic cardiovascular control, in order to better understand sex differences in hypertension. We performed machine learning analyses to predict BP, baroreceptor sensitivity (BRS) and heart rate variability (HRV) from plasma metabolite profiles for men and women separately.
+Primary aim: to investigate sex-specific plasma metabolite profiles that are associated with blood pressure and autonomic cardiovascular control, in order to better understand sex differences in hypertension. We performed machine learning analyses to predict BP, baroreceptor sensitivity (BRS) and heart rate variability (HRV) from plasma metabolite profiles for men and women separately.
 
 Secondary aim: to investigate the associations between gut microbiota composition and the plasma levels of the metabolites predicting BP and HRV, since this could help target future interventions.
 
@@ -9,7 +9,8 @@ Secondary aim: to investigate the associations between gut microbiota compositio
 A paper with more details on the methodology can be found here: [insert link]
 
 # Data
-- Clinical data including blood pressure and heart rate variability is unfortunately not publicly available because the informed consent does not allow us to make this data public. Any researcher can request the data by submitting a proposal to the HELIUS Executive Board (heliuscoordinator@amsterdamumc.nl) as outlined at http://www.heliusstudy.nl/en/researchers/collaboration. The HELIUS Executive Board will check proposals for compatibility with the general objectives, ethical approvals and informed consent forms of the HELIUS study. There are no other restrictions to obtaining the data and all data requests will be processed in the same manner. 
+For these analyses, we use data of the HELIUS cohort. For more information about this cohort, we refer to the HELIUS website (www.heliusstudy.nl) or the cohort profile paper (Snijder et al. BMJ Open 2017, http://dx.doi.org/10.1136/bmjopen-2017-017873). 
+- Clinical data including blood pressure and heart rate variability is unfortunately not publicly available because the informed consent does not allow us to make these data public. Any researcher can request the data by submitting a proposal to the HELIUS Executive Board (heliuscoordinator@amsterdamumc.nl) as outlined at http://www.heliusstudy.nl/en/researchers/collaboration. The HELIUS Executive Board will check proposals for compatibility with the general objectives, ethical approvals and informed consent forms of the HELIUS study. There are no other restrictions to obtaining the data and all data requests will be processed in the same manner. 
 - Metabolomics data: see paper for metabolomics methods.
 - Infofile metabolomics: list with identified metabolites can be found in the data folder.
 - 16S rRNA sequencing data (gut microbiota composition): The 16S sequencing data are available in the European Nucleotide Archive (ENA), accession number [PRJEB25863](https://www.ebi.ac.uk/ena/browser/view/PRJEB25863).
@@ -113,7 +114,7 @@ Tables and figures resulting from these scripts that can be found in the results
 - Explained variance: 
   - tables with explained variance of all models; 
   - tables with explained variance of permuted models; 
-  - plots with explained variances of different models.
+  - plots with explained variances of BP, HRV, BRS and metabolite models.
 - Linear regressions models:
   - tables with linear regression results
   - forest plots with estimates of linear regressions
