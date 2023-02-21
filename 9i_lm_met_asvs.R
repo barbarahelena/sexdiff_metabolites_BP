@@ -352,13 +352,13 @@ helius_serotonin_tot <- prepare(best_serotonin, helius_sphingo, asvdf)
 helius_epiandosterone_tot <- prepare(best_epiandosterone, helius_sphingo, asvdf)
 
 (pl1 <- lin_models(met="sphingomyelin (d18:1/20:2, d18:2/20:1, d16:1/22:2)*",df=helius_sphingo_tot, dfname="SM 38:3", writetable = FALSE))
-ggsave("results/lm_sphingomyelin_best10_mf.pdf", width = 5, height = 3, device = "pdf")
+ggsave("results/lm_SM_38_3_best10_mf.pdf", width = 5, height = 3, device = "pdf")
 
 (pl2 <- lin_models(met="sphingomyelin (d18:2/24:2)*",df=helius_sphingo2_tot, dfname="SM 42:4", writetable = FALSE))
-ggsave("results/lm_sphingomyelin2_best10_mf.pdf", width = 5, height = 3, device = "pdf")
+ggsave("results/lm_SM_42_4_best10_mf.pdf", width = 5, height = 3, device = "pdf")
 
 (pl3 <- lin_models(met="sphingomyelin (d18:1/22:2, d18:2/22:1, d16:1/24:2)*",df=helius_sphingo3_tot, dfname="SM 40:3", writetable = FALSE))
-ggsave("results/lm_sphingomyelin3_best10_mf.pdf", width = 5, height = 3, device = "pdf")
+ggsave("results/lm_SM_40_3_best10_mf.pdf", width = 5, height = 3, device = "pdf")
 
 (pl4 <- lin_models(met="vanillylmandelate (VMA)",df=helius_vma_tot, dfname="vanillylmandelate (VMA)", writetable = FALSE))
 ggsave("results/lm_vma_best10_mf.pdf", width = 5, height = 3, device = "pdf")
@@ -370,7 +370,7 @@ ggsave("results/lm_phenylacetate_best10.pdf", width = 5, height = 3, device = "p
 ggsave("results/lm_gentisate_best_10.pdf", width = 5, height = 3, device = "pdf")
 
 (pl7 <- lin_models(met="sphingomyelin (d18:1/20:0, d16:1/22:0)*",df=helius_sphingo4_tot, dfname="SM 38:1", writetable = FALSE))
-ggsave("results/lm_sphingo4_best_10.pdf", width = 5, height = 3, device = "pdf")
+ggsave("results/lm_SM_38_1_best_10.pdf", width = 5, height = 3, device = "pdf")
 
 (pl8 <- lin_models(met="glycerate",df=helius_glycerate_tot, dfname="glycerate", writetable = FALSE))
 ggsave("results/lm_glycerate_best_10.pdf", width = 5, height = 3, device = "pdf")
@@ -387,12 +387,12 @@ ggsave("results/220814_lm_metabolites_top10.pdf", height = 12, width = 10)
 
 (pl11 <- lin_strata(met="sphingomyelin (d18:1/20:2, d18:2/20:1, d16:1/22:2)*",
                     df=helius_sphingo_tot, dfname="SM 38:3", writetable = FALSE))
-ggsave("results/lm_sphingomyelin_best10_mf.pdf", width = 5, height = 3, device = "pdf")
+ggsave("results/lm_SM_38_3_best10_mf.pdf", width = 5, height = 3, device = "pdf")
 (pl12 <- lin_strata(met="sphingomyelin (d18:2/24:2)*", df=helius_sphingo2_tot, 
                     dfname="SM 42:4", writetable = FALSE))
-ggsave("results/lm_sphingomyelin_2_best10_mf.pdf", width = 5, height = 3, device = "pdf")
+ggsave("results/lm_sphingomyelin_42_4_best10_mf.pdf", width = 5, height = 3, device = "pdf")
 (pl13 <- lin_strata(met="sphingomyelin (d18:1/22:2, d18:2/22:1, d16:1/24:2)*",df=helius_sphingo3_tot, dfname="SM 40:3", writetable = FALSE))
-ggsave("results/lm_sphingomyelin_3_best_10_mf.pdf", width = 5, height = 3, device = "pdf")
+ggsave("results/lm_SM_40_3_best_10_mf.pdf", width = 5, height = 3, device = "pdf")
 (pl14 <- lin_strata(met="vanillylmandelate (VMA)",df=helius_vma_tot, 
                     dfname="vanillylmandelate (VMA)", writetable = FALSE))
 ggsave("results/lm_vma_best_10_mf.pdf", width = 5, height = 3, device = "pdf")
@@ -402,9 +402,8 @@ ggsave("results/lm_phenylacetate_best_10_mf.pdf", width = 5, height = 3, device 
 (pl16 <- lin_strata(met="gentisate",df=helius_gentisate_tot, dfname="gentisate", 
                     writetable = FALSE))
 ggsave("results/lm_gentisate_best_10_mf.pdf", width = 5, height = 3, device = "pdf")
-(pl17 <- lin_strata(met="sphingomyelin (d18:1/20:0, d16:1/22:0)*",df=helius_sphingo4_tot, dfname="SM 38:1", 
-                    writetable = FALSE))
-ggsave("results/lm_sphingmyelin_4_best_10_mf.pdf", width = 5, height = 3, device = "pdf")
+(pl17 <- lin_strata(met="sphingomyelin (d18:1/20:0, d16:1/22:0)*",df=helius_sphingo4_tot, dfname="SM 38:1", writetable = FALSE))
+ggsave("results/lm_SM_38_1_best_10_mf.pdf", width = 5, height = 3, device = "pdf")
 (pl18 <- lin_strata(met="glycerate",df=helius_glycerate_tot, dfname="glycerate", 
                     writetable = FALSE))
 ggsave("results/lm_glycerate_best_10_mf.pdf", width = 5, height = 3, device = "pdf")
