@@ -1,7 +1,7 @@
 ## Processing results subgroups
 ## Barbara Verhaar, b.j.verhaar@amsterdamumc.nl
 
-src('functions_class.R')
+source('functions_class.R')
 
 #### Process results ####
 path_true <- 'MaleFemale/output_XGB_class_MaleFemale_2020_11_18__14-57-28'
@@ -10,4 +10,4 @@ data_path <- 'MaleFemale/input_data'
 
 compared_to_permuted_class(path_true, path_permuted)
 plot_feature_importance_colors(path_true, top_n = 15)
-plot_features_tests_top(data_path, path_true, top_n=20, nrow=4)
+plot_features_tests_top(data_path, path_true, top_n=15, nrow=4)
