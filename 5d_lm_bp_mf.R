@@ -111,12 +111,13 @@ lin_strata <- function(df, dfname, outcome, metab, writetable = FALSE, figure = 
                 dftemp$met <- dftemp[,i][[1]]
                 dfsub$met <- dfsub[,i][[1]]
                 m1 <- lm(outcome ~ scale(met) + Age + CKDEPI + BMI + DM + 
-                             Microalb + CurrSmoking + AntiHT, data=dftemp)
-                m2 <- lm(outcome ~ scale(met) + scale(met)*Sex + Age + CKDEPI + 
-                             BMI + DM + Microalb + CurrSmoking  + AntiHT, data=dfsub)
+                             Microalb, data=dftemp)
+                m2 <- lm(outcome ~ scale(met) + Age + CKDEPI + BMI + DM + 
+                             Microalb + scale(met)*Sex, data=dfsub)
+                #print(summary(m2))
                 metname <- colnames(dftemp)[i]
                 m1 <- tidy(m1, conf.int=T)[2,]
-                m2 <- tidy(m2, conf.int=T)[11,] 
+                m2 <- tidy(m2, conf.int=T)[9,] 
                 resRow <- cbind(a, metname, m1$estimate, m1$conf.low, m1$conf.high, m1$p.value, m2$p.value)
                 colnames(resRow) <- c("Sex","Metabolite", "est", "l95", "u95", "p", "interaction")
                 res_lin <- rbind(res_lin, resRow)
@@ -141,7 +142,7 @@ lin_strata <- function(df, dfname, outcome, metab, writetable = FALSE, figure = 
             
             ylab <- "mmHg per SD increase"
             colors <- pal_jco()(4)[c(4,1)]
-            li <- res_lin2 %>% filter(interaction < 0.05) %>% select(Metabolite) %>% filter(duplicated(.))
+            li <- res_lin2 %>% filter(interaction < 0.1) %>% select(Metabolite) %>% filter(duplicated(.))
             
             pl1 <- ggplot(res_lin2, aes(x=Metabolite,y=est, color=Sex)) +
                 geom_hline(yintercept = 0, color = "grey40") +
