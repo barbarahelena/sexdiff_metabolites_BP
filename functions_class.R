@@ -198,7 +198,7 @@ plot_features_tests_top <- function(input_path, output_path, top_n=3, nrow=1, sa
                     # legend.title = element_text(face="italic"),
                     plot.margin=unit(c(10,5,5,5),"mm"),
                     strip.background=element_rect(colour="#f0f0f0",fill="#f0f0f0"),
-                    strip.text = element_text(face="bold")
+                    strip.text = element_text(face="bold", size = rel(0.7))
             ))
         
     } 
@@ -226,21 +226,26 @@ plot_features_tests_top <- function(input_path, output_path, top_n=3, nrow=1, sa
     cl <-  c(pal_lancet()(2)[2], pal_lancet()(2)[1])
     df <- dd %>% pivot_longer(-y, names_to = 'features', values_to = 'values')
     df$y <- factor(df$y)
+    df$features <- str_replace_all(df$features, "alpha", "\u03b1")
+    df$features <- str_replace_all(df$features, "beta", "\u03b2")
+    print(df$features)
     library(ggpubr)
     pl <- ggplot(df, aes(x=y, y=log10(values)))+
-        geom_violin(aes(fill=y), alpha = 0.8)+
+        geom_violin(aes(fill=y), alpha = 0.6)+
+        geom_boxplot(fill = "white", width = 0.1, outlier.shape = NA)+
         scale_fill_manual(values = cl) +
         theme_Publication()+
         theme(legend.position = 'none')+
         xlab('Group')+
         ylab('Metabolite concentration (log10)')+
-        stat_compare_means(comparisons = comps, paired = F)+
-        facet_wrap(~ features, nrow=nrow, scales = 'free')
+        stat_compare_means(comparisons = comps, paired = F, label = "p.signif",
+                           position = position_nudge(y = 0.5), method = "wilcox.test")+
+        facet_wrap(~ paste0(features), nrow=nrow, scales = 'free')
     
     if(savegg){
         dir.create(plot_path)
-        ggsave(pl, path = path_true, filename = paste0('top_',top_n,'_features_difference.pdf'), device = 'pdf', width = 8, height = 4)
-        ggsave(pl, path = path_true, filename = paste0('top_',top_n,'_features_difference.svg'), device = 'svg', width = 8, height = 4)
+        ggsave(pl, path = path_true, filename = paste0('top_',top_n,'_features_difference.pdf'), device = 'pdf', width = 12, height = 16)
+        ggsave(pl, path = path_true, filename = paste0('top_',top_n,'_features_difference.svg'), device = 'svg', width = 12, height = 16)
     }else{
         pl
     }
