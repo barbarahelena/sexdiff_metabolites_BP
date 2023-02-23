@@ -73,6 +73,39 @@ head(df)
 
 write.table(df, "results/220319_expvar.csv", sep=",")
 
+# Making permuted table
+ev_list <- list()
+groups <- c("SBP", "DBP", "BRS", "SDNN")
+for(g in groups){
+    for(d in c("Male", "Female")){
+        li <- list.files(path = file.path(g, d))
+        a <- str_detect(li, regex(g, ignore_case = T))
+        b <- str_detect(li, 'PERMUTED')
+        ev_list[[g]][[d]] <- rio::import(file.path(g, d, li[which(a&b)], 'aggregated_metrics_regression.txt'))
+    }
+}
+
+df <- data.frame()
+for (i in c(1:4)) {
+    for(d in c("Male", "Female")){
+        group <- str_split(names(ev_list[i]), pattern = '_', 2, simplify = T)[,1]
+        sex <- d
+        ev <- ev_list[[i]][[d]]$`Median Explained Variance`
+        row <- cbind(group, ev, sex)
+        df <- rbind(df, row)
+    }
+}
+
+df<- df %>% 
+    mutate(
+        ev = as.numeric(ev)*100,
+        group = as.factor(group)
+    )
+
+head(df)
+
+write.table(df, "results/230223_expvar_perm.csv", sep=",")
+
 
 # Making table with all iterations
 ev_list2 <- list()
