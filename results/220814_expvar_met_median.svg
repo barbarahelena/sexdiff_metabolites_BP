@@ -2220,9 +2220,9 @@
 <polyline points='110.71,256.04 110.71,253.05 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
 <polyline points='151.51,256.04 151.51,253.05 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
 <polyline points='192.30,256.04 192.30,253.05 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
-<text transform='translate(74.78,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='71.99px' lengthAdjust='spacingAndGlyphs'>sphingomyelin_1</text>
-<text transform='translate(115.58,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='71.99px' lengthAdjust='spacingAndGlyphs'>sphingomyelin_2</text>
-<text transform='translate(156.37,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='71.99px' lengthAdjust='spacingAndGlyphs'>sphingomyelin_3</text>
+<text transform='translate(74.78,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='82.66px' lengthAdjust='spacingAndGlyphs'>sphingomyelin 38:3</text>
+<text transform='translate(115.58,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='82.66px' lengthAdjust='spacingAndGlyphs'>sphingomyelin 42:4</text>
+<text transform='translate(156.37,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='82.66px' lengthAdjust='spacingAndGlyphs'>sphingomyelin 40:3</text>
 <text transform='translate(197.17,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='73.58px' lengthAdjust='spacingAndGlyphs'>vanillylmandelate</text>
 <polyline points='222.76,253.05 312.51,253.05 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
 <polyline points='247.23,256.04 247.23,253.05 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
@@ -2236,7 +2236,7 @@
 <polyline points='465.35,256.04 465.35,253.05 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
 <text transform='translate(347.83,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='38.93px' lengthAdjust='spacingAndGlyphs'>gentisate</text>
 <text transform='translate(388.63,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='59.73px' lengthAdjust='spacingAndGlyphs'>phenylacetate</text>
-<text transform='translate(429.42,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='71.99px' lengthAdjust='spacingAndGlyphs'>sphingomyelin_4</text>
+<text transform='translate(429.42,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='82.66px' lengthAdjust='spacingAndGlyphs'>sphingomyelin 38:1</text>
 <text transform='translate(470.22,263.30) rotate(-45)' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='38.92px' lengthAdjust='spacingAndGlyphs'>glycerate</text>
 <polyline points='45.44,253.05 45.44,50.03 ' style='stroke-width: 1.16; stroke-linecap: butt;' />
 <text x='40.06' y='247.26' text-anchor='end' style='font-size: 9.60px; font-family: "Arial";' textLength='13.87px' lengthAdjust='spacingAndGlyphs'>-30</text>
